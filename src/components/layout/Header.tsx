@@ -2,7 +2,7 @@ import { useState, useEffect } from "react";
 import { Link, useLocation } from "react-router-dom";
 import { Menu, X } from "lucide-react";
 import { Button } from "@/components/ui/button";
-
+import Logo from "../../public/logo-campus.png";
 const navLinks = [
   { name: "Inicio", path: "/" },
   { name: "Servicios", path: "/servicios" },
@@ -40,7 +40,7 @@ export const Header = () => {
         <Link to="/" className="flex items-center gap-2">
           <div className="w-10 h-10 rounded-lg bg-gradient-to-br from-primary to-secondary flex items-center justify-center">
             <img 
-              src="../../public/logo-campus.png" 
+              src={Logo} 
               alt="Logo" 
               className="w-8 h-8 object-contain"
             />

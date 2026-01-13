@@ -1,6 +1,6 @@
 import { Link } from "react-router-dom";
 import { Mail, Phone, MapPin, Github, Linkedin, Twitter } from "lucide-react";
-
+import Logo from "../../public/logo-campus.png";
 export const Footer = () => {
   return (
     <footer className="bg-card border-t border-border">
@@ -11,7 +11,7 @@ export const Footer = () => {
             <Link to="/" className="flex items-center gap-2">
               <div className="w-10 h-10 rounded-lg bg-gradient-to-br from-primary to-secondary flex items-center justify-center">
                 <img 
-                  src="../../public/logo-campus.png" 
+                  src={Logo} 
                   alt="Logo" 
                   className="w-8 h-8 object-contain"
                 />
