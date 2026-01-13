@@ -12,18 +12,15 @@ const Project = () => {
     return <Navigate to="/portafolio" replace />;
   }
 
-  // Get next and previous projects for navigation
   const currentIndex = projects.findIndex((p) => p.id === id);
   const nextProject = projects[(currentIndex + 1) % projects.length];
   const prevProject = projects[(currentIndex - 1 + projects.length) % projects.length];
 
   return (
     <Layout>
-      {/* Hero */}
       <section className="pt-32 pb-16 relative">
         <div className="absolute inset-0 bg-gradient-to-br from-primary/10 via-background to-secondary/10" />
         <div className="container mx-auto px-4 relative z-10">
-          {/* Back Button */}
           <Link
             to="/portafolio"
             className="inline-flex items-center gap-2 text-muted-foreground hover:text-foreground transition-colors mb-8"
@@ -49,10 +46,6 @@ const Project = () => {
               </p>
 
               <div className="flex flex-wrap gap-4 mb-8">
-                <div>
-                  <div className="text-sm text-muted-foreground">Cliente</div>
-                  <div className="font-semibold">{project.client}</div>
-                </div>
                 <div>
                   <div className="text-sm text-muted-foreground">Año</div>
                   <div className="font-semibold">{project.year}</div>

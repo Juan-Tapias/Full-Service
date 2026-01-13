@@ -1,84 +1,108 @@
-import { Globe, Smartphone, Server, Lightbulb, ArrowRight, CheckCircle2 } from "lucide-react";
+import { 
+  Code, 
+  Users, 
+  BarChart3, 
+  Package, 
+  ArrowRight, 
+  CheckCircle2 
+} from "lucide-react";
 import { Layout } from "@/components/layout/Layout";
 import { Button } from "@/components/ui/button";
 
 const services = [
   {
-    icon: Globe,
-    title: "Desarrollo Web",
-    description: "Creamos aplicaciones web modernas, rápidas y escalables utilizando las últimas tecnologías del mercado.",
+    icon: Code,
+    title: "Desarrollo Software a la Medida",
+    description: "Soluciones completamente personalizadas que se adaptan a tus procesos específicos, con propiedad total del código fuente y escalabilidad garantizada.",
     features: [
-      "Aplicaciones web responsive",
-      "Progressive Web Apps (PWA)",
-      "E-commerce y tiendas online",
-      "Dashboards y paneles de control",
-      "Portales corporativos",
-      "Integración con APIs",
+      "Software 100% propietario",
+      "Adaptación perfecta a procesos",
+      "Escalabilidad ilimitada",
+      "Integración total de sistemas",
+      "Ciclo completo de desarrollo",
+      "Soporte y mantenimiento continuo"
     ],
   },
   {
-    icon: Smartphone,
-    title: "Aplicaciones Móviles",
-    description: "Desarrollamos aplicaciones nativas y multiplataforma para iOS y Android que destacan por su rendimiento y diseño.",
+    icon: Users,
+    title: "Células de Trabajo",
+    description: "Equipos multidisciplinarios autónomos disponibles por horas o proyectos, con talento especializado y tarifas competitivas en USD.",
     features: [
-      "Apps iOS nativas (Swift)",
-      "Apps Android nativas (Kotlin)",
-      "Apps multiplataforma (React Native)",
-      "Integración con hardware del dispositivo",
-      "Notificaciones push",
-      "Sincronización offline",
-    ],
-  },
-  {
-    icon: Server,
-    title: "Software a Medida",
-    description: "Soluciones personalizadas que se adaptan perfectamente a las necesidades específicas de tu negocio.",
-    features: [
-      "Sistemas de gestión empresarial (ERP)",
-      "CRM personalizados",
-      "Automatización de procesos",
-      "Integración de sistemas legacy",
-      "APIs y microservicios",
-      "Bases de datos optimizadas",
-    ],
-  },
-  {
-    icon: Lightbulb,
-    title: "Consultoría IT",
-    description: "Asesoramiento experto para optimizar tus procesos y definir la mejor estrategia tecnológica.",
-    features: [
-      "Auditoría tecnológica",
+      "Full Stack Development",
+      "DevOps y QA Testing",
+      "Data Science y Machine Learning",
+      "UX/UI Design profesional",
       "Arquitectura de software",
-      "Optimización de rendimiento",
-      "Seguridad y cumplimiento",
-      "Migración a la nube",
-      "Transformación digital",
+      "Tarifas por rol y seniority"
+    ],
+  },
+  {
+    icon: BarChart3,
+    title: "Consultorías Transformación Digital",
+    description: "Análisis profundo de procesos empresariales con planes estratégicos de automatización e implementación de IA generativa.",
+    features: [
+      "Diagnóstico de procesos",
+      "Visitas in situ a operaciones",
+      "Plan de transformación digital",
+      "Automatización con IA",
+      "Estrategia tecnológica",
+      "Roadmap de implementación"
+    ],
+  },
+  {
+    icon: Package,
+    title: "Comercialización Productos Existentes",
+    description: "Implementación inmediata de productos probados y listos para usar, con personalización y soporte técnico especializado.",
+    features: [
+      "Taskman gestión de tareas",
+      "Marketplace P2P colaborativo",
+      "Plataformas LMS educativas",
+      "Configuradores 3D productos",
+      "Sistemas gestión entrenamiento",
+      "Agente IA IZA 24/7"
     ],
   },
 ];
 
+
 const processSteps = [
   {
     number: "01",
-    title: "Descubrimiento",
-    description: "Analizamos tus necesidades, objetivos y desafíos para entender completamente tu visión.",
+    title: "Idea",
+    description: "Capturamos tu visión inicial y definimos los objetivos del proyecto desde la concepción del software.",
   },
   {
     number: "02",
-    title: "Planificación",
-    description: "Diseñamos la arquitectura y creamos un roadmap detallado con hitos claros y medibles.",
+    title: "Hacer Cotización",
+    description: "Analizamos requerimientos detallados y estructuramos propuesta técnica y comercial precisa.",
   },
   {
     number: "03",
-    title: "Desarrollo",
-    description: "Construimos tu solución con metodologías ágiles, entregas incrementales y comunicación constante.",
+    title: "Requerimientos",
+    description: "Documentamos especificaciones funcionales y técnicas con estructura completa del proyecto.",
   },
   {
     number: "04",
-    title: "Lanzamiento",
-    description: "Desplegamos, capacitamos a tu equipo y brindamos soporte continuo post-lanzamiento.",
+    title: "Estructura Proyecto",
+    description: "Definimos arquitectura, equipo y roadmap con hitos claros para ejecución eficiente.",
+  },
+  {
+    number: "05",
+    title: "Escribir el Código",
+    description: "Desarrollamos con metodología ágil, entregas incrementales y pruebas continuas de calidad.",
+  },
+  {
+    number: "06",
+    title: "Pruebas QA",
+    description: "Validamos exhaustivamente funcionalidad, rendimiento y seguridad antes del lanzamiento.",
+  },
+  {
+    number: "07",
+    title: "Mejoras",
+    description: "Iteramos continuamente con feedback del cliente para optimización y nuevas funcionalidades.",
   },
 ];
+
 
 const techStack = [
   "React", "TypeScript", "Node.js", "Python", "PostgreSQL", "MongoDB",
@@ -107,7 +131,6 @@ const Services = () => {
         </div>
       </section>
 
-      {/* Services */}
       <section className="py-16">
         <div className="container mx-auto px-4">
           <div className="space-y-16">
@@ -170,19 +193,25 @@ const Services = () => {
           </div>
 
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
-            {processSteps.map((step, index) => (
+            {processSteps.slice(0, 4).map((step) => (
               <div key={step.number} className="relative">
-                {/* Connector Line */}
-                {index < processSteps.length - 1 && (
-                  <div className="hidden lg:block absolute top-8 left-full w-full h-0.5 bg-gradient-to-r from-primary/50 to-transparent -z-10" />
-                )}
-                
                 <div className="text-5xl font-bold text-primary/20 mb-4">{step.number}</div>
                 <h3 className="text-xl font-semibold mb-2">{step.title}</h3>
                 <p className="text-sm text-muted-foreground">{step.description}</p>
               </div>
             ))}
+
+            <div className="lg:col-span-4 flex justify-center gap-8">
+              {processSteps.slice(4).map((step) => (
+                <div key={step.number} className="relative w-[250px]">
+                  <div className="text-5xl font-bold text-primary/20 mb-4">{step.number}</div>
+                  <h3 className="text-xl font-semibold mb-2">{step.title}</h3>
+                  <p className="text-sm text-muted-foreground">{step.description}</p>
+                </div>
+              ))}
+            </div>
           </div>
+
         </div>
       </section>
 

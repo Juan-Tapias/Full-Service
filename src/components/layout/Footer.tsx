@@ -10,9 +10,13 @@ export const Footer = () => {
           <div className="space-y-4">
             <Link to="/" className="flex items-center gap-2">
               <div className="w-10 h-10 rounded-lg bg-gradient-to-br from-primary to-secondary flex items-center justify-center">
-                <span className="text-xl font-bold text-primary-foreground">N</span>
+                <img 
+                  src="../../public/logo-campus.png" 
+                  alt="Logo" 
+                  className="w-8 h-8 object-contain"
+                />
               </div>
-              <span className="text-xl font-bold">NexaTech</span>
+              <span className="text-xl font-bold">FullService</span>
             </Link>
             <p className="text-muted-foreground text-sm">
               Transformamos ideas en soluciones digitales innovadoras. 
@@ -70,16 +74,16 @@ export const Footer = () => {
             <h3 className="font-semibold mb-4">Servicios</h3>
             <ul className="space-y-3">
               <li>
-                <span className="text-muted-foreground text-sm">Desarrollo Web</span>
+                <span className="text-muted-foreground text-sm">Desarrollo Software a la Medida</span>
               </li>
               <li>
-                <span className="text-muted-foreground text-sm">Apps Móviles</span>
+                <span className="text-muted-foreground text-sm">Células de Trabajo</span>
               </li>
               <li>
-                <span className="text-muted-foreground text-sm">Software a Medida</span>
+                <span className="text-muted-foreground text-sm">Consultorías Transformación Digital</span>
               </li>
               <li>
-                <span className="text-muted-foreground text-sm">Consultoría IT</span>
+                <span className="text-muted-foreground text-sm">Comercialización Productos Existentes</span>
               </li>
             </ul>
           </div>
@@ -104,9 +108,8 @@ export const Footer = () => {
           </div>
         </div>
 
-        {/* Copyright */}
         <div className="border-t border-border mt-12 pt-8 text-center text-sm text-muted-foreground">
-          <p>© {new Date().getFullYear()} NexaTech. Todos los derechos reservados.</p>
+          <p>© {new Date().getFullYear()} FullService. Todos los derechos reservados.</p>
         </div>
       </div>
     </footer>

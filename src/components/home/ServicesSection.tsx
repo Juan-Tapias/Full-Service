@@ -1,26 +1,26 @@
-import { Globe, Smartphone, Server, Lightbulb } from "lucide-react";
+import { Code, Users, Cpu, ShoppingCart } from "lucide-react";
 import { Link } from "react-router-dom";
 
 const services = [
   {
-    icon: Globe,
-    title: "Desarrollo Web",
-    description: "Creamos aplicaciones web modernas, rápidas y escalables utilizando las últimas tecnologías.",
+    icon: Code,
+    title: "Desarrollo Software a la Medida",
+    description: "Soluciones personalizadas, adaptables y propietarias del código para procesos eficientes.",
   },
   {
-    icon: Smartphone,
-    title: "Apps Móviles",
-    description: "Desarrollamos aplicaciones nativas y multiplataforma para iOS y Android.",
+    icon: Users,
+    title: "Células de Trabajo",
+    description: "Equipos autónomos y escalables por horas, con talento especializado (Full Stack, DevOps, etc.).",
   },
   {
-    icon: Server,
-    title: "Software a Medida",
-    description: "Soluciones personalizadas que se adaptan perfectamente a las necesidades de tu negocio.",
+    icon: Cpu,
+    title: "Consultorías",
+    description: "Transformación digital, análisis de procesos y planes con IA generativa.",
   },
   {
-    icon: Lightbulb,
-    title: "Consultoría IT",
-    description: "Asesoramiento experto para optimizar tus procesos y estrategia tecnológica.",
+    icon: ShoppingCart,
+    title: "Comercialización Productos Existentes",
+    description: "Implementación y venta de productos propios probados como Taskman, marketplaces y LMS para resultados inmediatos.",
   },
 ];
 

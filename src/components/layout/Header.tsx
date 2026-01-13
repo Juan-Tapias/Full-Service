@@ -37,15 +37,17 @@ export const Header = () => {
       }`}
     >
       <div className="container mx-auto px-4 flex items-center justify-between">
-        {/* Logo */}
         <Link to="/" className="flex items-center gap-2">
           <div className="w-10 h-10 rounded-lg bg-gradient-to-br from-primary to-secondary flex items-center justify-center">
-            <span className="text-xl font-bold text-primary-foreground">N</span>
+            <img 
+              src="../../public/logo-campus.png" 
+              alt="Logo" 
+              className="w-8 h-8 object-contain"
+            />
           </div>
-          <span className="text-xl font-bold">NexaTech</span>
+          <span className="text-xl font-bold">FULLSERVICE</span>
         </Link>
 
-        {/* Desktop Navigation */}
         <nav className="hidden md:flex items-center gap-8">
           {navLinks.map((link) => (
             <Link

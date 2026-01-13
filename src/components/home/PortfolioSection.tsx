@@ -8,7 +8,6 @@ export const PortfolioSection = () => {
   return (
     <section className="py-24 bg-card/50">
       <div className="container mx-auto px-4">
-        {/* Section Header */}
         <div className="text-center max-w-2xl mx-auto mb-16">
           <span className="text-sm font-medium text-accent uppercase tracking-wider">
             Portafolio
@@ -22,7 +21,6 @@ export const PortfolioSection = () => {
           </p>
         </div>
 
-        {/* Projects Grid */}
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
           {featuredProjects.map((project, index) => (
             <Link

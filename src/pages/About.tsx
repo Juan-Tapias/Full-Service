@@ -1,49 +1,49 @@
-import { Target, Eye, Heart, Users, Award, Clock, Zap } from "lucide-react";
+import { Target, Eye, Heart, Users, Award, Clock, Zap, Code, GraduationCap } from "lucide-react";
 import { Layout } from "@/components/layout/Layout";
 
 const values = [
   {
     icon: Target,
-    title: "Excelencia",
-    description: "Nos esforzamos por superar las expectativas en cada proyecto, entregando soluciones de la más alta calidad.",
+    title: "Salto Social",
+    description: "Transformamos vidas de población vulnerable mediante formación tecnológica intensiva y empleabilidad 100% garantizada.",
   },
   {
     icon: Users,
-    title: "Colaboración",
-    description: "Trabajamos como un equipo unido, tanto internamente como con nuestros clientes, para lograr objetivos comunes.",
+    title: "Talento Exponencial",
+    description: "Formamos jóvenes de estratos bajos con 1600h programación, 300h inglés y 200h liderazgo en 10 meses.",
   },
   {
     icon: Zap,
-    title: "Innovación",
-    description: "Exploramos constantemente nuevas tecnologías y metodologías para ofrecer soluciones de vanguardia.",
+    title: "Flexibilidad Total",
+    description: "Células de trabajo autónomas, horas flexibles y soluciones escalables adaptadas a cualquier necesidad.",
   },
   {
-    icon: Heart,
-    title: "Compromiso",
-    description: "Nos comprometemos con el éxito de nuestros clientes, tratando cada proyecto como si fuera propio.",
+    icon: Code,
+    title: "Propiedad del Código",
+    description: "Software 100% tuyo sin licencias ni dependencias de terceros, con control total y escalabilidad infinita.",
   },
 ];
 
 const reasons = [
   {
     icon: Award,
-    title: "Experiencia comprobada",
-    description: "Más de 8 años desarrollando soluciones exitosas para empresas de todos los tamaños.",
+    title: "Talento Especializado",
+    description: "Desarrolladores formados en Campuslands con experiencia real y tarifas competitivas en USD por seniority.",
   },
   {
     icon: Users,
-    title: "Equipo experto",
-    description: "Profesionales certificados y apasionados por la tecnología y la innovación.",
+    title: "Acompañamiento Continuo",
+    description: "Desde análisis de procesos hasta soporte post-lanzamiento, estamos contigo en cada etapa del proyecto.",
   },
   {
     icon: Clock,
-    title: "Entrega puntual",
-    description: "Cumplimos con los plazos establecidos sin comprometer la calidad del producto.",
+    title: "Agilidad Comprobada",
+    description: "Metodología ágil iterativa que entrega valor continuo con pruebas QA exhaustivas desde el día 1.",
   },
   {
-    icon: Zap,
-    title: "Soporte continuo",
-    description: "Acompañamiento post-lanzamiento para garantizar el éxito a largo plazo.",
+    icon: GraduationCap,
+    title: "Impacto Social Positivo",
+    description: "Cada línea de código genera movilidad social para jóvenes sin recursos, madres cabeza y migrantes.",
   },
 ];
 
@@ -56,14 +56,14 @@ const About = () => {
         <div className="container mx-auto px-4 relative z-10">
           <div className="max-w-3xl">
             <span className="text-sm font-medium text-accent uppercase tracking-wider">
-              Nosotros
+              Full Service Campuslands
             </span>
             <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold mt-4 mb-6">
-              Conoce a <span className="gradient-text">NexaTech</span>
+              Soluciones <span className="gradient-text">Full Service</span> con Impacto Social
             </h1>
             <p className="text-lg text-muted-foreground">
-              Somos un equipo apasionado por la tecnología, dedicado a 
-              transformar ideas en soluciones digitales que generan impacto.
+              Transformamos ideas en software que genera 
+              movilidad social y resultados empresariales exponenciales desde Floridablanca, Santander.
             </p>
           </div>
         </div>
@@ -77,20 +77,16 @@ const About = () => {
               <h2 className="text-3xl font-bold mb-6">Nuestra historia</h2>
               <div className="space-y-4 text-muted-foreground">
                 <p>
-                  NexaTech nació en 2016 con una visión clara: democratizar el 
-                  acceso a soluciones tecnológicas de alta calidad para empresas 
-                  de todos los tamaños.
+                  Campuslands nace en la Zona Franca Santander con misión de movilidad social para población 
+                  vulnerable: jóvenes sin recursos, madres cabeza, discapacitados, estratos 0-3 y migrantes.
                 </p>
                 <p>
-                  Comenzamos como un pequeño equipo de desarrolladores apasionados 
-                  y hemos crecido hasta convertirnos en una empresa consolidada con 
-                  presencia internacional, manteniendo siempre nuestra esencia: la 
-                  cercanía con el cliente y el compromiso con la excelencia.
+                  Full Service surge para canalizar nuestro talento exponencial hacia empresas que necesitan 
+                  soluciones integrales de desarrollo software con impacto social garantizado y calidad TI.
                 </p>
                 <p>
-                  Hoy, con más de 50 proyectos exitosos en nuestro portafolio, 
-                  seguimos innovando y adaptándonos a las nuevas tecnologías para 
-                  ofrecer las mejores soluciones a nuestros clientes.
+                  Hoy exportamos talento y soluciones a múltiples países con portafolio probado de 7+ productos 
+                  y células de trabajo autónomas listas para escalar cualquier desafío tecnológico.
                 </p>
               </div>
             </div>
@@ -98,7 +94,7 @@ const About = () => {
               <div className="aspect-video rounded-2xl bg-card border border-border overflow-hidden">
                 <img
                   src="https://images.unsplash.com/photo-1522071820081-009f0129c71c?w=800&h=600&fit=crop"
-                  alt="Equipo NexaTech"
+                  alt="Campuslands Floridablanca"
                   className="w-full h-full object-cover"
                 />
               </div>
@@ -119,9 +115,8 @@ const About = () => {
               </div>
               <h3 className="text-2xl font-bold mb-4">Nuestra misión</h3>
               <p className="text-muted-foreground">
-                Impulsar el crecimiento de nuestros clientes a través de soluciones 
-                tecnológicas innovadoras, eficientes y escalables que transformen 
-                sus ideas en productos digitales exitosos.
+                Generar SALTO SOCIAL a través de formación tecnológica intensiva (1600h programación + 300h inglés) 
+                con 100% empleabilidad garantizada para población vulnerable.
               </p>
             </div>
 
@@ -132,9 +127,8 @@ const About = () => {
               </div>
               <h3 className="text-2xl font-bold mb-4">Nuestra visión</h3>
               <p className="text-muted-foreground">
-                Ser reconocidos globalmente como líderes en desarrollo de software 
-                personalizado, destacando por nuestra innovación, calidad y el 
-                impacto positivo que generamos en cada proyecto.
+                Ser el puente tecnológico que conecta talento vulnerable con empresas globales, resolviendo 
+                desconexión de sistemas, procesos manuales y pérdida de competitividad con software a la medida.
               </p>
             </div>
           </div>
@@ -152,8 +146,7 @@ const About = () => {
               Lo que nos define
             </h2>
             <p className="text-muted-foreground">
-              Nuestros valores guían cada decisión que tomamos y cada línea de 
-              código que escribimos.
+              Nuestros pilares fundamentales guían cada solución que entregamos.
             </p>
           </div>
 
@@ -179,14 +172,13 @@ const About = () => {
         <div className="container mx-auto px-4">
           <div className="text-center max-w-2xl mx-auto mb-16">
             <span className="text-sm font-medium text-accent uppercase tracking-wider">
-              Ventajas
+              Ventajas Competitivas
             </span>
             <h2 className="text-3xl md:text-4xl font-bold mt-4 mb-6">
-              Por qué elegirnos
+              Por qué Full Service
             </h2>
             <p className="text-muted-foreground">
-              Descubre las razones por las que nuestros clientes confían en 
-              nosotros para sus proyectos más importantes.
+              Descubre por qué empresas confían en nosotros para sus proyectos críticos.
             </p>
           </div>
 
@@ -214,20 +206,20 @@ const About = () => {
         <div className="container mx-auto px-4">
           <div className="grid grid-cols-2 md:grid-cols-4 gap-8 text-center">
             <div>
-              <div className="text-4xl md:text-5xl font-bold gradient-text">8+</div>
-              <div className="text-muted-foreground mt-2">Años de experiencia</div>
+              <div className="text-4xl md:text-5xl font-bold gradient-text">6+</div>
+              <div className="text-muted-foreground mt-2">Años formando talento</div>
             </div>
             <div>
-              <div className="text-4xl md:text-5xl font-bold gradient-text">50+</div>
-              <div className="text-muted-foreground mt-2">Proyectos completados</div>
+              <div className="text-4xl md:text-5xl font-bold gradient-text">7+</div>
+              <div className="text-muted-foreground mt-2">Productos en portafolio</div>
             </div>
             <div>
-              <div className="text-4xl md:text-5xl font-bold gradient-text">30+</div>
-              <div className="text-muted-foreground mt-2">Clientes satisfechos</div>
+              <div className="text-4xl md:text-5xl font-bold gradient-text">500+</div>
+              <div className="text-muted-foreground mt-2">Jóvenes impactados</div>
             </div>
             <div>
-              <div className="text-4xl md:text-5xl font-bold gradient-text">15+</div>
-              <div className="text-muted-foreground mt-2">Expertos en el equipo</div>
+              <div className="text-4xl md:text-5xl font-bold gradient-text">100%</div>
+              <div className="text-muted-foreground mt-2">Empleabilidad garantizada</div>
             </div>
           </div>
         </div>

@@ -61,11 +61,11 @@ export const HeroSection = () => {
           {/* Stats */}
           <div className="grid grid-cols-3 gap-8 mt-20 pt-10 border-t border-border/50 animate-fade-in" style={{ animationDelay: "0.4s" }}>
             <div>
-              <div className="text-3xl md:text-4xl font-bold gradient-text">50+</div>
+              <div className="text-3xl md:text-4xl font-bold gradient-text">6</div>
               <div className="text-sm text-muted-foreground mt-1">Proyectos completados</div>
             </div>
             <div>
-              <div className="text-3xl md:text-4xl font-bold gradient-text">8+</div>
+              <div className="text-3xl md:text-4xl font-bold gradient-text">5+</div>
               <div className="text-sm text-muted-foreground mt-1">Años de experiencia</div>
             </div>
             <div>
