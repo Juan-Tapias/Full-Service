@@ -2,7 +2,7 @@ import { useState, useEffect } from "react";
 import { Link, useLocation } from "react-router-dom";
 import { Menu, X } from "lucide-react";
 import { Button } from "@/components/ui/button";
-import Logo from "../../public/logo-campus.png";
+import Logo from "/logo-campus.png";
 const navLinks = [
   { name: "Inicio", path: "/" },
   { name: "Servicios", path: "/servicios" },

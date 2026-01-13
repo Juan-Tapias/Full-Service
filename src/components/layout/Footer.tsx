@@ -1,6 +1,6 @@
 import { Link } from "react-router-dom";
 import { Mail, Phone, MapPin, Github, Linkedin, Twitter } from "lucide-react";
-import Logo from "../../public/logo-campus.png";
+import Logo from "/logo-campus.png";
 export const Footer = () => {
   return (
     <footer className="bg-card border-t border-border">
