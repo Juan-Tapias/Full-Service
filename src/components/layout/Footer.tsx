@@ -24,21 +24,21 @@ export const Footer = () => {
             </p>
             <div className="flex gap-4">
               <a
-                href="#"
+                href="https://github.com/CampusLands"
                 className="w-10 h-10 rounded-full bg-muted flex items-center justify-center hover:bg-primary transition-colors"
                 aria-label="Github"
               >
                 <Github className="w-5 h-5" />
               </a>
               <a
-                href="#"
+                href="https://www.linkedin.com/company/campuslands/posts/?feedView=all"
                 className="w-10 h-10 rounded-full bg-muted flex items-center justify-center hover:bg-primary transition-colors"
                 aria-label="LinkedIn"
               >
                 <Linkedin className="w-5 h-5" />
               </a>
               <a
-                href="#"
+                href="https://x.com/Campuslands"
                 className="w-10 h-10 rounded-full bg-muted flex items-center justify-center hover:bg-primary transition-colors"
                 aria-label="Twitter"
               >
@@ -46,8 +46,6 @@ export const Footer = () => {
               </a>
             </div>
           </div>
-
-          {/* Quick Links */}
           <div>
             <h3 className="font-semibold mb-4">Enlaces Rápidos</h3>
             <ul className="space-y-3">
@@ -69,7 +67,6 @@ export const Footer = () => {
             </ul>
           </div>
 
-          {/* Services */}
           <div>
             <h3 className="font-semibold mb-4">Servicios</h3>
             <ul className="space-y-3">
@@ -88,21 +85,20 @@ export const Footer = () => {
             </ul>
           </div>
 
-          {/* Contact */}
           <div>
             <h3 className="font-semibold mb-4">Contacto</h3>
             <ul className="space-y-3">
               <li className="flex items-center gap-3 text-sm text-muted-foreground">
                 <Mail className="w-4 h-4 text-primary" />
-                <span>contacto@nexatech.com</span>
+                <span>fullservices.campus@gmail.com</span>
               </li>
               <li className="flex items-center gap-3 text-sm text-muted-foreground">
                 <Phone className="w-4 h-4 text-primary" />
-                <span>+1 234 567 890</span>
+                <span>+57 311 7652435</span>
               </li>
               <li className="flex items-center gap-3 text-sm text-muted-foreground">
                 <MapPin className="w-4 h-4 text-primary" />
-                <span>Ciudad, País</span>
+                <span>Floridablanca, Santander</span>
               </li>
             </ul>
           </div>

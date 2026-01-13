@@ -66,14 +66,19 @@ export const Header = () => {
           ))}
         </nav>
 
-        {/* CTA Button */}
         <Button
+          asChild
           className="hidden md:flex bg-gradient-to-r from-primary to-secondary hover:opacity-90 transition-opacity"
         >
-          Contáctanos
+          <a
+            href="https://w.app/qgct1j"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            Contáctanos
+          </a>
         </Button>
 
-        {/* Mobile Menu Button */}
         <button
           className="md:hidden p-2"
           onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
