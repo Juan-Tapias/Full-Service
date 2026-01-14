@@ -25,6 +25,7 @@ export const Footer = () => {
             <div className="flex gap-4">
               <a
                 href="https://github.com/CampusLands"
+                target="_blank"
                 className="w-10 h-10 rounded-full bg-muted flex items-center justify-center hover:bg-primary transition-colors"
                 aria-label="Github"
               >
@@ -32,6 +33,7 @@ export const Footer = () => {
               </a>
               <a
                 href="https://www.linkedin.com/company/campuslands/posts/?feedView=all"
+                target="_blank"
                 className="w-10 h-10 rounded-full bg-muted flex items-center justify-center hover:bg-primary transition-colors"
                 aria-label="LinkedIn"
               >
@@ -39,6 +41,7 @@ export const Footer = () => {
               </a>
               <a
                 href="https://x.com/Campuslands"
+                target="_blank"
                 className="w-10 h-10 rounded-full bg-muted flex items-center justify-center hover:bg-primary transition-colors"
                 aria-label="Twitter"
               >

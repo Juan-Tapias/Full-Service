@@ -92,7 +92,6 @@ export const Header = () => {
         </button>
       </div>
 
-      {/* Mobile Menu */}
       {isMobileMenuOpen && (
         <div className="md:hidden glass-effect mt-2 mx-4 rounded-lg p-4 animate-fade-in">
           <nav className="flex flex-col gap-4">
@@ -110,7 +109,13 @@ export const Header = () => {
               </Link>
             ))}
             <Button className="w-full bg-gradient-to-r from-primary to-secondary hover:opacity-90 transition-opacity mt-2">
+              <a
+                href="https://w.app/qgct1j"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
               Contáctanos
+              </a>
             </Button>
           </nav>
         </div>
