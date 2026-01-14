@@ -50,7 +50,6 @@ const reasons = [
 const About = () => {
   return (
     <Layout>
-      {/* Hero */}
       <section className="pt-32 pb-16 relative">
         <div className="absolute inset-0 bg-gradient-to-br from-primary/10 via-background to-secondary/10" />
         <div className="container mx-auto px-4 relative z-10">
@@ -69,7 +68,6 @@ const About = () => {
         </div>
       </section>
 
-      {/* Story */}
       <section className="py-16">
         <div className="container mx-auto px-4">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
@@ -104,11 +102,9 @@ const About = () => {
         </div>
       </section>
 
-      {/* Mission & Vision */}
       <section className="py-24 bg-card/50">
         <div className="container mx-auto px-4">
           <div className="grid grid-cols-1 md:grid-cols-2 gap-12">
-            {/* Mission */}
             <div className="p-8 rounded-2xl bg-background border border-border">
               <div className="w-14 h-14 rounded-xl bg-gradient-to-br from-primary to-secondary flex items-center justify-center mb-6">
                 <Target className="w-7 h-7 text-primary-foreground" />
@@ -120,7 +116,6 @@ const About = () => {
               </p>
             </div>
 
-            {/* Vision */}
             <div className="p-8 rounded-2xl bg-background border border-border">
               <div className="w-14 h-14 rounded-xl bg-gradient-to-br from-primary to-secondary flex items-center justify-center mb-6">
                 <Eye className="w-7 h-7 text-primary-foreground" />
@@ -135,7 +130,6 @@ const About = () => {
         </div>
       </section>
 
-      {/* Values */}
       <section className="py-24">
         <div className="container mx-auto px-4">
           <div className="text-center max-w-2xl mx-auto mb-16">
@@ -167,7 +161,6 @@ const About = () => {
         </div>
       </section>
 
-      {/* Why Choose Us */}
       <section className="py-24 bg-card/50">
         <div className="container mx-auto px-4">
           <div className="text-center max-w-2xl mx-auto mb-16">
@@ -201,7 +194,6 @@ const About = () => {
         </div>
       </section>
 
-      {/* Stats */}
       <section className="py-24">
         <div className="container mx-auto px-4">
           <div className="grid grid-cols-2 md:grid-cols-4 gap-8 text-center">

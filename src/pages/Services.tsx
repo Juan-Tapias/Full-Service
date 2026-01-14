@@ -73,18 +73,18 @@ const processSteps = [
   },
   {
     number: "02",
-    title: "Hacer Cotización",
-    description: "Analizamos requerimientos detallados y estructuramos propuesta técnica y comercial precisa.",
-  },
-  {
-    number: "03",
     title: "Requerimientos",
     description: "Documentamos especificaciones funcionales y técnicas con estructura completa del proyecto.",
   },
   {
-    number: "04",
+    number: "03",
     title: "Estructura Proyecto",
     description: "Definimos arquitectura, equipo y roadmap con hitos claros para ejecución eficiente.",
+  },
+  {
+    number: "04",
+    title: "Hacer Cotización",
+    description: "Analizamos requerimientos detallados y estructuramos propuesta técnica y comercial precisa.",
   },
   {
     number: "05",
@@ -112,7 +112,6 @@ const techStack = [
 const Services = () => {
   return (
     <Layout>
-      {/* Hero */}
       <section className="pt-32 pb-16 relative">
         <div className="absolute inset-0 bg-gradient-to-br from-primary/10 via-background to-secondary/10" />
         <div className="container mx-auto px-4 relative z-10">
@@ -141,7 +140,6 @@ const Services = () => {
                   index % 2 === 1 ? "lg:grid-flow-col-dense" : ""
                 }`}
               >
-                {/* Content */}
                 <div className={index % 2 === 1 ? "lg:col-start-2" : ""}>
                   <div className="w-16 h-16 rounded-xl bg-gradient-to-br from-primary to-secondary flex items-center justify-center mb-6">
                     <service.icon className="w-8 h-8 text-primary-foreground" />
@@ -159,7 +157,6 @@ const Services = () => {
                   </ul>
                 </div>
 
-                {/* Visual */}
                 <div className={`relative ${index % 2 === 1 ? "lg:col-start-1" : ""}`}>
                   <div className="aspect-square max-w-md mx-auto rounded-2xl bg-card border border-border p-8 relative overflow-hidden">
                     <div className="absolute inset-0 bg-gradient-to-br from-primary/5 to-secondary/5" />
@@ -176,7 +173,6 @@ const Services = () => {
         </div>
       </section>
 
-      {/* Process */}
       <section className="py-24 bg-card/50">
         <div className="container mx-auto px-4">
           <div className="text-center max-w-2xl mx-auto mb-16">
@@ -215,7 +211,6 @@ const Services = () => {
         </div>
       </section>
 
-      {/* Tech Stack */}
       <section className="py-24">
         <div className="container mx-auto px-4">
           <div className="text-center max-w-2xl mx-auto mb-16">
@@ -243,7 +238,6 @@ const Services = () => {
         </div>
       </section>
 
-      {/* CTA */}
       <section className="py-24 bg-gradient-to-br from-primary/20 via-background to-secondary/20">
         <div className="container mx-auto px-4 text-center">
           <h2 className="text-3xl md:text-4xl font-bold mb-6">

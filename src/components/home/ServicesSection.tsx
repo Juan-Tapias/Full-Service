@@ -28,7 +28,6 @@ export const ServicesSection = () => {
   return (
     <section className="py-24 relative">
       <div className="container mx-auto px-4">
-        {/* Section Header */}
         <div className="text-center max-w-2xl mx-auto mb-16">
           <span className="text-sm font-medium text-accent uppercase tracking-wider">
             Servicios
@@ -40,8 +39,6 @@ export const ServicesSection = () => {
             Ofrecemos soluciones tecnológicas completas para llevar tu negocio al siguiente nivel.
           </p>
         </div>
-
-        {/* Services Grid */}
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
           {services.map((service, index) => (
             <div
@@ -49,24 +46,20 @@ export const ServicesSection = () => {
               className="group relative p-6 rounded-xl bg-card border border-border hover:border-primary/50 transition-all duration-300 hover:shadow-lg hover:shadow-primary/10"
               style={{ animationDelay: `${index * 0.1}s` }}
             >
-              {/* Icon */}
               <div className="w-14 h-14 rounded-lg bg-gradient-to-br from-primary to-secondary flex items-center justify-center mb-5 group-hover:scale-110 transition-transform duration-300">
                 <service.icon className="w-7 h-7 text-primary-foreground" />
               </div>
 
-              {/* Content */}
               <h3 className="text-xl font-semibold mb-3">{service.title}</h3>
               <p className="text-muted-foreground text-sm leading-relaxed">
                 {service.description}
               </p>
 
-              {/* Hover Effect Line */}
               <div className="absolute bottom-0 left-0 right-0 h-1 bg-gradient-to-r from-primary to-secondary scale-x-0 group-hover:scale-x-100 transition-transform duration-300 rounded-b-xl" />
             </div>
           ))}
         </div>
 
-        {/* CTA */}
         <div className="text-center mt-12">
           <Link
             to="/servicios"
