@@ -40,9 +40,11 @@ function useCarousel() {
 
 const Carousel = React.forwardRef<HTMLDivElement, React.HTMLAttributes<HTMLDivElement> & CarouselProps>(
   ({ orientation = "horizontal", opts, setApi, plugins, className, children, ...props }, ref) => {
+    const [isHovered, setIsHovered] = React.useState(false);
     const [carouselRef, api] = useEmblaCarousel(
       {
         ...opts,
+        loop: true,
         axis: orientation === "horizontal" ? "x" : "y",
       },
       plugins,
@@ -102,31 +104,44 @@ const Carousel = React.forwardRef<HTMLDivElement, React.HTMLAttributes<HTMLDivEl
       };
     }, [api, onSelect]);
 
-    return (
-      <CarouselContext.Provider
-        value={{
-          carouselRef,
-          api: api,
-          opts,
-          orientation: orientation || (opts?.axis === "y" ? "vertical" : "horizontal"),
-          scrollPrev,
-          scrollNext,
-          canScrollPrev,
-          canScrollNext,
-        }}
-      >
-        <div
-          ref={ref}
-          onKeyDownCapture={handleKeyDown}
-          className={cn("relative", className)}
-          role="region"
-          aria-roledescription="carousel"
-          {...props}
+      React.useEffect(() => {
+        if (!api || !isHovered) return;
+        
+        const interval = setInterval(() => {
+          if (api) api.scrollNext(); 
+        }, 3000); 
+        
+        return () => clearInterval(interval);
+      }, [api]);
+
+      return (
+        <CarouselContext.Provider
+          value={{
+            carouselRef,
+            api: api,
+            opts,
+            orientation: orientation || (opts?.axis === "y" ? "vertical" : "horizontal"),
+            scrollPrev,
+            scrollNext,
+            canScrollPrev,
+            canScrollNext,
+          }}
         >
+          <div
+            ref={ref}
+            onMouseEnter={() => {
+              setIsHovered(true);
+            }}
+            onMouseLeave={() => {
+              setIsHovered(false);
+            }}
+            className={cn("relative", className)}
+          >
+
           {children}
         </div>
-      </CarouselContext.Provider>
-    );
+        </CarouselContext.Provider>
+      );
   },
 );
 Carousel.displayName = "Carousel";
@@ -165,60 +180,96 @@ const CarouselItem = React.forwardRef<HTMLDivElement, React.HTMLAttributes<HTMLD
 );
 CarouselItem.displayName = "CarouselItem";
 
-const CarouselPrevious = React.forwardRef<HTMLButtonElement, React.ComponentProps<typeof Button>>(
-  ({ className, variant = "outline", size = "icon", ...props }, ref) => {
-    const { orientation, scrollPrev, canScrollPrev } = useCarousel();
+const CarouselPrevious = React.forwardRef<
+  HTMLButtonElement,
+  React.ComponentProps<typeof Button>
+>(({ className, variant = "outline", size = "icon", ...props }, ref) => {
+  const { orientation, scrollPrev, canScrollPrev } = useCarousel();
+  const hoverInterval = React.useRef<NodeJS.Timeout | null>(null);
 
-    return (
-      <Button
-        ref={ref}
-        variant={variant}
-        size={size}
-        className={cn(
-          "absolute h-8 w-8 rounded-full",
-          orientation === "horizontal"
-            ? "-left-12 top-1/2 -translate-y-1/2"
-            : "-top-12 left-1/2 -translate-x-1/2 rotate-90",
-          className,
-        )}
-        disabled={!canScrollPrev}
-        onClick={scrollPrev}
-        {...props}
-      >
-        <ArrowLeft className="h-4 w-4" />
-        <span className="sr-only">Previous slide</span>
-      </Button>
-    );
-  },
-);
+  const handleMouseEnter = () => {
+    if (!canScrollPrev || hoverInterval.current) return;
+
+    hoverInterval.current = setInterval(() => {
+      scrollPrev();
+    }, 1000);
+  };
+
+  const handleMouseLeave = () => {
+    if (hoverInterval.current) {
+      clearInterval(hoverInterval.current);
+      hoverInterval.current = null;
+    }
+  };
+
+  return (
+    <Button
+      ref={ref}
+      variant={variant}
+      size={size}
+      onMouseEnter={handleMouseEnter}
+      onMouseLeave={handleMouseLeave}
+      disabled={!canScrollPrev}
+      className={cn(
+        "absolute h-8 w-8 rounded-full",
+        orientation === "horizontal"
+          ? "-left-12 top-1/2 -translate-y-1/2"
+          : "-top-12 left-1/2 -translate-x-1/2 rotate-90",
+        className
+      )}
+      {...props}
+    >
+      <ArrowLeft className="h-4 w-4" />
+    </Button>
+  );
+});
+
 CarouselPrevious.displayName = "CarouselPrevious";
 
-const CarouselNext = React.forwardRef<HTMLButtonElement, React.ComponentProps<typeof Button>>(
-  ({ className, variant = "outline", size = "icon", ...props }, ref) => {
-    const { orientation, scrollNext, canScrollNext } = useCarousel();
+const CarouselNext = React.forwardRef<
+  HTMLButtonElement,
+  React.ComponentProps<typeof Button>
+>(({ className, variant = "outline", size = "icon", ...props }, ref) => {
+  const { orientation, scrollNext, canScrollNext } = useCarousel();
+  const hoverInterval = React.useRef<NodeJS.Timeout | null>(null);
 
-    return (
-      <Button
-        ref={ref}
-        variant={variant}
-        size={size}
-        className={cn(
-          "absolute h-8 w-8 rounded-full",
-          orientation === "horizontal"
-            ? "-right-12 top-1/2 -translate-y-1/2"
-            : "-bottom-12 left-1/2 -translate-x-1/2 rotate-90",
-          className,
-        )}
-        disabled={!canScrollNext}
-        onClick={scrollNext}
-        {...props}
-      >
-        <ArrowRight className="h-4 w-4" />
-        <span className="sr-only">Next slide</span>
-      </Button>
-    );
-  },
-);
+  const handleMouseEnter = () => {
+    if (!canScrollNext) return;
+
+    hoverInterval.current = setInterval(() => {
+      scrollNext();
+    }, 1000);
+  };
+
+  const handleMouseLeave = () => {
+    if (hoverInterval.current) {
+      clearInterval(hoverInterval.current);
+      hoverInterval.current = null;
+    }
+  };
+
+  return (
+    <Button
+      ref={ref}
+      variant={variant}
+      size={size}
+      onMouseEnter={handleMouseEnter}
+      onMouseLeave={handleMouseLeave}
+      disabled={!canScrollNext}
+      className={cn(
+        "absolute h-8 w-8 rounded-full",
+        orientation === "horizontal"
+          ? "-right-12 top-1/2 -translate-y-1/2"
+          : "-bottom-12 left-1/2 -translate-x-1/2 rotate-90",
+        className
+      )}
+      {...props}
+    >
+      <ArrowRight className="h-4 w-4" />
+    </Button>
+  );
+});
+
 CarouselNext.displayName = "CarouselNext";
 
 export { type CarouselApi, Carousel, CarouselContent, CarouselItem, CarouselPrevious, CarouselNext };

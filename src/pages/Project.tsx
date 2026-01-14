@@ -4,6 +4,13 @@ import { Layout } from "@/components/layout/Layout";
 import { Button } from "@/components/ui/button";
 import { getProjectById, projects } from "@/data/projects";
 import { useState} from "react";
+import {
+  Carousel,
+  CarouselContent,
+  CarouselItem,
+  CarouselPrevious,
+  CarouselNext,
+} from "@/components/ui/carousel";
 
 const Project = () => {
   const { id } = useParams<{ id: string }>();
@@ -113,39 +120,58 @@ const Project = () => {
       {project.gallery.length > 1 && (
         <section className="py-16 bg-card/50">
           <div className="container mx-auto px-4">
-            <h2 className="text-2xl font-bold mb-8">Galería</h2>
-              <div className="flex flex-wrap gap-6 justify-center">
-                {activeImage && (
-                  <div
-                    className="fixed inset-0 z-50 flex items-center justify-center bg-black/70 backdrop-blur-sm transition-opacity"
-                    onClick={() => setActiveImage(null)}
-                  >
-                    <img
-                      src={activeImage}
-                      alt="Imagen ampliada"
-                      className="max-w-[90%] max-h-[90%] rounded-xl shadow-2xl 
-                                animate-in zoom-in duration-300"
-                      onClick={(e) => e.stopPropagation()}
-                    />
-                  </div>
-                )}
-                {project.gallery.map((image, index) => (
-                  <div
-                    key={index}
-                    className=" w-full sm:w-[48%] lg:w-[30%] rounded-xl overflow-hidden border border-border"
-                  >
-                    <img
-                      src={image}
-                      alt={`${project.title} - Imagen ${index + 1}`}
-                      onClick={() => setActiveImage(image)}
-                      className="w-full h-64 object-cover cursor-zoom-in hover:scale-105 transition-transform duration-500"
-                    />
-                  </div>
-                ))}
+            <h2 className="text-2xl font-bold mb-8 text-center">
+              Galería
+            </h2>
+
+            {activeImage && (
+              <div
+                className="fixed inset-0 z-50 flex items-center justify-center bg-black/70 backdrop-blur-sm"
+                onClick={() => setActiveImage(null)}
+              >
+                <img
+                  src={activeImage}
+                  alt="Imagen ampliada"
+                  className="max-w-[90%] max-h-[90%] rounded-xl shadow-2xl
+                            animate-in zoom-in duration-300"
+                  onClick={(e) => e.stopPropagation()}
+                />
               </div>
+            )}
+
+            <Carousel
+              opts={{
+                align: "start",
+                loop: true,
+              }}
+              className="w-full max-w-6xl mx-auto"
+            >
+              <CarouselContent>
+                {project.gallery.map((image, index) => (
+                  <CarouselItem
+                    key={index}
+                    className="md:basis-1/2 lg:basis-1/3 pl-4"
+                  >
+                    <div className="rounded-xl overflow-hidden border border-border bg-card">
+                      <img
+                        src={image}
+                        alt={`${project.title} - Imagen ${index + 1}`}
+                        onClick={() => setActiveImage(image)}
+                        className="w-full h-64 object-cover cursor-zoom-in
+                                  hover:scale-105 transition-transform duration-500"
+                      />
+                    </div>
+                  </CarouselItem>
+                ))}
+              </CarouselContent>
+
+              <CarouselPrevious className="hidden md:flex -left-12" />
+              <CarouselNext className="hidden md:flex -right-12" />
+            </Carousel>
           </div>
         </section>
       )}
+
 
       <section className="py-16">
         <div className="container mx-auto px-4">
