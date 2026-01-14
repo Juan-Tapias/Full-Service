@@ -3,7 +3,7 @@ import { ArrowLeft, ExternalLink, CheckCircle2 } from "lucide-react";
 import { Layout } from "@/components/layout/Layout";
 import { Button } from "@/components/ui/button";
 import { getProjectById, projects } from "@/data/projects";
-import { useState, useEffect } from "react";
+import { useState} from "react";
 
 const Project = () => {
   const { id } = useParams<{ id: string }>();
