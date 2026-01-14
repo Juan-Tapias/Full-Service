@@ -87,6 +87,10 @@ export const projects: Project[] = [
     ],
     gallery: [
       "https://images.unsplash.com/photo-1501504905252-473c47e087f8?w=800&h=600&fit=crop",
+      "https://images.unsplash.com/photo-1501504905252-473c47e087f8?w=800&h=600&fit=crop",
+      "https://images.unsplash.com/photo-1501504905252-473c47e087f8?w=800&h=600&fit=crop",
+      "https://images.unsplash.com/photo-1501504905252-473c47e087f8?w=800&h=600&fit=crop",
+      "https://images.unsplash.com/photo-1501504905252-473c47e087f8?w=800&h=600&fit=crop",
       "https://images.unsplash.com/photo-1522202176988-66273c2fd55f?w=800&h=600&fit=crop"
     ]
   },

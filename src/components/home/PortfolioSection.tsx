@@ -29,7 +29,6 @@ export const PortfolioSection = () => {
               className="group relative rounded-xl overflow-hidden bg-card border border-border hover:border-primary/50 transition-all duration-300"
               style={{ animationDelay: `${index * 0.1}s` }}
             >
-              {/* Image */}
               <div className="relative h-56 overflow-hidden">
                 <img
                   src={project.image}
@@ -38,13 +37,11 @@ export const PortfolioSection = () => {
                 />
                 <div className="absolute inset-0 bg-gradient-to-t from-card via-card/50 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
                 
-                {/* Arrow Icon */}
                 <div className="absolute top-4 right-4 w-10 h-10 rounded-full bg-background/80 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity duration-300 backdrop-blur-sm">
                   <ArrowUpRight className="w-5 h-5" />
                 </div>
               </div>
 
-              {/* Content */}
               <div className="p-6">
                 <div className="flex items-center gap-2 mb-3">
                   <span className="text-xs font-medium px-2 py-1 rounded-full bg-primary/20 text-primary">
@@ -59,7 +56,6 @@ export const PortfolioSection = () => {
                   {project.shortDescription}
                 </p>
                 
-                {/* Technologies */}
                 <div className="flex flex-wrap gap-2 mt-4">
                   {project.technologies.slice(0, 3).map((tech) => (
                     <span
@@ -80,7 +76,6 @@ export const PortfolioSection = () => {
           ))}
         </div>
 
-        {/* CTA */}
         <div className="text-center mt-12">
           <Link
             to="/portafolio"

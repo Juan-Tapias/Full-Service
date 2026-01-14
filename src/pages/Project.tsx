@@ -3,6 +3,7 @@ import { ArrowLeft, ExternalLink, CheckCircle2 } from "lucide-react";
 import { Layout } from "@/components/layout/Layout";
 import { Button } from "@/components/ui/button";
 import { getProjectById, projects } from "@/data/projects";
+import { useState, useEffect } from "react";
 
 const Project = () => {
   const { id } = useParams<{ id: string }>();
@@ -12,6 +13,8 @@ const Project = () => {
     return <Navigate to="/portafolio" replace />;
   }
 
+
+  const [activeImage, setActiveImage] = useState<string | null>(null);
   const currentIndex = projects.findIndex((p) => p.id === id);
   const nextProject = projects[(currentIndex + 1) % projects.length];
   const prevProject = projects[(currentIndex - 1 + projects.length) % projects.length];
@@ -30,7 +33,6 @@ const Project = () => {
           </Link>
 
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
-            {/* Content */}
             <div>
               <div className="flex items-center gap-3 mb-4">
                 <span className="text-sm font-medium px-3 py-1 rounded-full bg-primary/20 text-primary">
@@ -65,7 +67,6 @@ const Project = () => {
               )}
             </div>
 
-            {/* Main Image */}
             <div className="relative rounded-2xl overflow-hidden border border-border">
               <img
                 src={project.image}
@@ -77,11 +78,9 @@ const Project = () => {
         </div>
       </section>
 
-      {/* Features & Technologies */}
       <section className="py-16">
         <div className="container mx-auto px-4">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-12">
-            {/* Features */}
             <div>
               <h2 className="text-2xl font-bold mb-6">Características principales</h2>
               <ul className="space-y-4">
@@ -94,7 +93,6 @@ const Project = () => {
               </ul>
             </div>
 
-            {/* Technologies */}
             <div>
               <h2 className="text-2xl font-bold mb-6">Tecnologías utilizadas</h2>
               <div className="flex flex-wrap gap-3">
@@ -112,30 +110,43 @@ const Project = () => {
         </div>
       </section>
 
-      {/* Gallery */}
       {project.gallery.length > 1 && (
         <section className="py-16 bg-card/50">
           <div className="container mx-auto px-4">
             <h2 className="text-2xl font-bold mb-8">Galería</h2>
-            <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-              {project.gallery.map((image, index) => (
-                <div
-                  key={index}
-                  className="rounded-xl overflow-hidden border border-border"
-                >
-                  <img
-                    src={image}
-                    alt={`${project.title} - Imagen ${index + 1}`}
-                    className="w-full h-64 object-cover hover:scale-105 transition-transform duration-500"
-                  />
-                </div>
-              ))}
-            </div>
+              <div className="flex flex-wrap gap-6 justify-center">
+                {activeImage && (
+                  <div
+                    className="fixed inset-0 z-50 flex items-center justify-center bg-black/70 backdrop-blur-sm transition-opacity"
+                    onClick={() => setActiveImage(null)}
+                  >
+                    <img
+                      src={activeImage}
+                      alt="Imagen ampliada"
+                      className="max-w-[90%] max-h-[90%] rounded-xl shadow-2xl 
+                                animate-in zoom-in duration-300"
+                      onClick={(e) => e.stopPropagation()}
+                    />
+                  </div>
+                )}
+                {project.gallery.map((image, index) => (
+                  <div
+                    key={index}
+                    className=" w-full sm:w-[48%] lg:w-[30%] rounded-xl overflow-hidden border border-border"
+                  >
+                    <img
+                      src={image}
+                      alt={`${project.title} - Imagen ${index + 1}`}
+                      onClick={() => setActiveImage(image)}
+                      className="w-full h-64 object-cover cursor-zoom-in hover:scale-105 transition-transform duration-500"
+                    />
+                  </div>
+                ))}
+              </div>
           </div>
         </section>
       )}
 
-      {/* Navigation */}
       <section className="py-16">
         <div className="container mx-auto px-4">
           <div className="flex flex-col sm:flex-row justify-between items-center gap-4 border-t border-border pt-12">
