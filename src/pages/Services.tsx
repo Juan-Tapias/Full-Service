@@ -78,13 +78,13 @@ const processSteps = [
   },
   {
     number: "03",
-    title: "Estructura Proyecto",
-    description: "Definimos arquitectura, equipo y roadmap con hitos claros para ejecución eficiente.",
+    title: "Hacer Cotización",
+    description: "Analizamos requerimientos detallados y estructuramos propuesta técnica y comercial precisa.",
   },
   {
     number: "04",
-    title: "Hacer Cotización",
-    description: "Analizamos requerimientos detallados y estructuramos propuesta técnica y comercial precisa.",
+    title: "Estructura Proyecto",
+    description: "Definimos arquitectura, equipo y roadmap con hitos claros para ejecución eficiente.",
   },
   {
     number: "05",
