@@ -1,7 +1,6 @@
 import { useParams, Link, Navigate } from "react-router-dom";
-import { ArrowLeft, ExternalLink, CheckCircle2 } from "lucide-react";
+import { ArrowLeft, CheckCircle2 } from "lucide-react";
 import { Layout } from "@/components/layout/Layout";
-import { Button } from "@/components/ui/button";
 import { getProjectById, projects } from "@/data/projects";
 import { useState} from "react";
 import {
@@ -60,18 +59,6 @@ const Project = () => {
                   <div className="font-semibold">{project.year}</div>
                 </div>
               </div>
-
-              {project.link && (
-                <Button
-                  className="bg-gradient-to-r from-primary to-secondary hover:opacity-90"
-                  asChild
-                >
-                  <a href={project.link} target="_blank" rel="noopener noreferrer">
-                    Ver proyecto en vivo
-                    <ExternalLink className="ml-2 w-4 h-4" />
-                  </a>
-                </Button>
-              )}
             </div>
 
             <div className="relative rounded-2xl overflow-hidden border border-border">
@@ -86,34 +73,19 @@ const Project = () => {
       </section>
 
       <section className="py-16">
-        <div className="container mx-auto px-4">
-          <div className="grid grid-cols-1 lg:grid-cols-2 gap-12">
-            <div>
-              <h2 className="text-2xl font-bold mb-6">Características principales</h2>
-              <ul className="space-y-4">
-                {project.features.map((feature, index) => (
-                  <li key={index} className="flex items-start gap-3">
-                    <CheckCircle2 className="w-5 h-5 text-accent mt-0.5 flex-shrink-0" />
-                    <span className="text-muted-foreground">{feature}</span>
-                  </li>
-                ))}
-              </ul>
-            </div>
+        <div className="text-center">
+          <h1 className="text-4xl font-bold mb-10">
+            Características principales
+          </h1>
 
-            <div>
-              <h2 className="text-2xl font-bold mb-6">Tecnologías utilizadas</h2>
-              <div className="flex flex-wrap gap-3">
-                {project.technologies.map((tech) => (
-                  <span
-                    key={tech}
-                    className="px-4 py-2 rounded-lg bg-card border border-border text-sm font-medium hover:border-primary/50 transition-colors"
-                  >
-                    {tech}
-                  </span>
-                ))}
-              </div>
-            </div>
-          </div>
+          <ul className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-x-12 gap-y-4 max-w-5xl mx-auto">
+            {project.features.map((feature, index) => (
+              <li key={index} className="flex items-start gap-3">
+                <CheckCircle2 className="w-5 h-5 text-accent mt-0.5 flex-shrink-0" />
+                <span className="text-muted-foreground">{feature}</span>
+              </li>
+            ))}
+          </ul>
         </div>
       </section>
 

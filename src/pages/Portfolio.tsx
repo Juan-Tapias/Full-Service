@@ -61,21 +61,6 @@ const Portfolio = () => {
                     {project.shortDescription}
                   </p>
                   
-                  <div className="flex flex-wrap gap-2 mt-4">
-                    {project.technologies.slice(0, 3).map((tech) => (
-                      <span
-                        key={tech}
-                        className="text-xs px-2 py-1 rounded-md bg-muted text-muted-foreground"
-                      >
-                        {tech}
-                      </span>
-                    ))}
-                    {project.technologies.length > 3 && (
-                      <span className="text-xs px-2 py-1 rounded-md bg-muted text-muted-foreground">
-                        +{project.technologies.length - 3}
-                      </span>
-                    )}
-                  </div>
                 </div>
               </Link>
             ))}
