@@ -192,7 +192,7 @@ const CarouselPrevious = React.forwardRef<
 
     hoverInterval.current = setInterval(() => {
       scrollPrev();
-    }, 1000);
+    }, 500);
   };
 
   const handleMouseLeave = () => {
@@ -238,7 +238,7 @@ const CarouselNext = React.forwardRef<
 
     hoverInterval.current = setInterval(() => {
       scrollNext();
-    }, 1000);
+    }, 500);
   };
 
   const handleMouseLeave = () => {

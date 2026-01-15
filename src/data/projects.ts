@@ -1,14 +1,33 @@
+type ProjectImage = string;
+
+const images = import.meta.glob(
+  "../../public/images/*/*.{png,jpg,jpeg}",
+  {
+    eager: true,
+    import: "default",
+  }
+) as Record<string, string>;
+
+export function loadProjectImages(projectSlug: string): string[] {
+  return Object.entries(images)
+    .filter(([path]) => path.includes(`/${projectSlug}/`))
+    .map(([, img]) => img)
+    .sort();
+}
+const orbitImages = loadProjectImages("orbit");
+const avicampoImages = loadProjectImages("avicampo");
+
 export interface Project {
   id: string;
   title: string;
   shortDescription: string;
   fullDescription: string;
-  image: string;
+  image: ProjectImage;
   technologies: string[];
   category: string;
   year: string;
   features: string[];
-  gallery: string[];
+  gallery: ProjectImage[];
   link?: string;
 }
 
@@ -153,7 +172,41 @@ export const projects: Project[] = [
       "https://images.unsplash.com/photo-1560518883-ce09059eeffa?w=800&h=600&fit=crop",
       "https://images.unsplash.com/photo-1512917774080-9991f1c4c750?w=800&h=600&fit=crop"
     ]
-  }
+  },
+  {
+    id: "Orbit",
+    title: "ORBIT",
+    shortDescription: "Aplicación móvil para logística de última milla.",
+    fullDescription: "Plataforma logística de última generación con +10K descargas que optimiza rutas en tiempo real, gestiona flotas dinámicas y maximiza márgenes operativos. Con geolocalización predictiva, balanceo automático de carga, promociones dinámicas por IA y panel ejecutivo multi-ciudad, nuestra solución multiplica pedidos diarios x3 y reduce tiempos de entrega en 42%. Escalable a cualquier vertical de negocio.",
+    image: orbitImages[2],
+    technologies: ["React Native", "AWS", "PostgreSQL"],
+    category: "Logística",
+    year: "2025",
+    features: [
+      "Geolocalización predictiva con IA",
+      "Balanceo automático de domiciliarios",
+      "Promociones dinámicas por ciudad/hora",
+      "Panel multi-ciudad en tiempo real"
+    ],
+    gallery: orbitImages
+  },
+  {
+    id: "avicampo",
+    title: "AVICAMPO",
+    shortDescription: "Aplicación móvil para logística de última milla.",
+    fullDescription: "Plataforma logística de última generación con +10K descargas que optimiza rutas en tiempo real, gestiona flotas dinámicas y maximiza márgenes operativos. Con geolocalización predictiva, balanceo automático de carga, promociones dinámicas por IA y panel ejecutivo multi-ciudad, nuestra solución multiplica pedidos diarios x3 y reduce tiempos de entrega en 42%. Escalable a cualquier vertical de negocio.",
+    image: avicampoImages[3],
+    technologies: ["React Native", "AWS", "PostgreSQL"],
+    category: "Logística",
+    year: "2025",
+    features: [
+      "Geolocalización predictiva con IA",
+      "Balanceo automático de domiciliarios",
+      "Promociones dinámicas por ciudad/hora",
+      "Panel multi-ciudad en tiempo real"
+    ],
+    gallery: avicampoImages
+  }  
 ];
 
 
