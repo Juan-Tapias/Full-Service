@@ -1,7 +1,7 @@
 type ProjectImage = string;
 
 const images = import.meta.glob(
-  "../../public/images/*/*.{png,jpg,jpeg}",
+  "@/assets/images/*/*.{png,jpg,jpeg}",
   {
     eager: true,
     import: "default",
