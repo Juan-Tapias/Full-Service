@@ -104,15 +104,15 @@ const Carousel = React.forwardRef<HTMLDivElement, React.HTMLAttributes<HTMLDivEl
       };
     }, [api, onSelect]);
 
-      React.useEffect(() => {
-        if (!api || !isHovered) return;
+      // React.useEffect(() => {
+      //   if (!api || !isHovered) return;
         
-        const interval = setInterval(() => {
-          if (api) api.scrollNext(); 
-        }, 3000); 
+      //   const interval = setInterval(() => {
+      //     if (api) api.scrollNext(); 
+      //   }, 3000); 
         
-        return () => clearInterval(interval);
-      }, [api]);
+      //   return () => clearInterval(interval);
+      // }, [api]);
 
       return (
         <CarouselContext.Provider

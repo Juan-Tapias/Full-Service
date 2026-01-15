@@ -173,37 +173,48 @@ export const projects: Project[] = [
     ]
   },
   {
-    id: "Orbit",
+    id: "Orbit-AI",
     title: "ORBIT",
-    shortDescription: "Aplicación móvil para logística de última milla.",
-    fullDescription: "Plataforma logística de última generación con +10K descargas que optimiza rutas en tiempo real, gestiona flotas dinámicas y maximiza márgenes operativos. Con geolocalización predictiva, balanceo automático de carga, promociones dinámicas por IA y panel ejecutivo multi-ciudad, nuestra solución multiplica pedidos diarios x3 y reduce tiempos de entrega en 42%. Escalable a cualquier vertical de negocio.",
+    shortDescription: "Asesor Comercial IA",
+    fullDescription: "Plataforma integral de automatización comercial impulsada por un agente conversacional de inteligencia artificial. Centraliza la atención al cliente, la gestión del embudo comercial y el control operativo desde un panel unificado, garantizando atención 24/7, trazabilidad completa de cada contacto y optimización continua del proceso de ventas.",
     image: orbitImages[2],
-    category: "Logística",
-    year: "2025",
+    category: "Asesor IA",
+    year: "2026",
     features: [
-      "Geolocalización predictiva con IA",
-      "Balanceo automático de domiciliarios",
-      "Promociones dinámicas por ciudad/hora",
-      "Panel multi-ciudad en tiempo real"
+      "Visualización de métricas clave de ingresos, conversión y crecimiento en tiempo real mediante un dashboard ejecutivo.",
+      "Gestión centralizada de conversaciones multicanal con capacidad de intervención humana en casos complejos.",
+      "Seguimiento detallado del ciclo de vida de cada cliente o lead, desde el primer contacto hasta la conversión o cierre.",
+      "Actualización y entrenamiento del asesor IA mediante la carga y categorización de documentos de procesos, políticas o productos.",
+      "Configuración de sedes físicas, horarios de atención y zonas de cobertura para la asignación automática de citas o servicios.",
+      "Administración de catálogos de productos o servicios con precios, disponibilidad y segmentación por sucursal.",
+      "Control de acceso al sistema mediante roles y permisos granulares por módulo.",
+      "Automatización de validaciones, calificaciones de leads y agendamiento de citas presenciales o virtuales.",
+      "Supervisión completa del flujo conversacional y del historial de interacciones entre el agente y los clientes."
     ],
     gallery: orbitImages
   },
   {
     id: "avicampo",
-    title: "AVICAMPO",
-    shortDescription: "Aplicación móvil para logística de última milla.",
-    fullDescription: "Plataforma logística de última generación con +10K descargas que optimiza rutas en tiempo real, gestiona flotas dinámicas y maximiza márgenes operativos. Con geolocalización predictiva, balanceo automático de carga, promociones dinámicas por IA y panel ejecutivo multi-ciudad, nuestra solución multiplica pedidos diarios x3 y reduce tiempos de entrega en 42%. Escalable a cualquier vertical de negocio.",
+    title: "Sistema de Gestión de Pedidos con Agente IA",
+    shortDescription: "Plataforma de automatización inteligente para la gestión de pedidos y atención al cliente mediante agentes conversacionales.",
+    fullDescription: "Plataforma integral de automatización operativa que optimiza la gestión de pedidos y la atención al cliente a través de un agente conversacional basado en inteligencia artificial. Permite a los usuarios realizar pedidos, consultar catálogos y hacer seguimiento de sus solicitudes de forma autónoma. Incorpora un panel administrativo avanzado para la gestión multi-sucursal, asignación inteligente de pedidos por zonas y un dashboard con analítica en tiempo real para el control de indicadores clave del negocio.",
     image: avicampoImages[3],
-    category: "Logística",
+    category: "Automatización Comercial y Operativa",
     year: "2025",
     features: [
-      "Geolocalización predictiva con IA",
-      "Balanceo automático de domiciliarios",
-      "Promociones dinámicas por ciudad/hora",
-      "Panel multi-ciudad en tiempo real"
+      "Visualización en tiempo real de KPIs operativos, ingresos y tendencias de demanda.",
+      "Administración de catálogos de productos o servicios mediante carga masiva con plantillas estructuradas.",
+      "Asignación automática de pedidos o solicitudes según zonas geográficas configurables.",
+      "Gestión centralizada de conversaciones con capacidad de intervención humana en tiempo real.",
+      "Entrenamiento y actualización del agente IA mediante carga de documentos y bases de conocimiento.",
+      "Control de acceso basado en roles y permisos personalizados por módulo.",
+      "Seguimiento completo del ciclo de vida de pedidos o solicitudes, desde la creación hasta el cierre.",
+      "Configuración flexible de horarios de atención por sede, equipo o canal.",
+      "Gestión de múltiples métodos de pago y validación de transacciones.",
+      "Exportación de reportes operativos, históricos de pedidos y bases de datos para análisis externo."
     ],
     gallery: avicampoImages
-  }  
+  }
 ];
 
 
