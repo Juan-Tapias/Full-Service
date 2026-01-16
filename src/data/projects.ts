@@ -17,6 +17,7 @@ export function loadProjectImages(projectSlug: string): string[] {
 const orbitImages = loadProjectImages("orbit");
 const avicampoImages = loadProjectImages("avicampo");
 const macLearning = loadProjectImages("MacLearning");
+const hooyApp = loadProjectImages("hooy")
 
 export interface Project {
   id: string;
@@ -95,20 +96,25 @@ export const projects: Project[] = [
     gallery: macLearning
   },
   {
-    id: "taskman",
-    title: "Taskman",
-    shortDescription: "Software de gestión de tareas para equipos e individuos.",
-    fullDescription: "Taskman es la solución definitiva para transformar la caos organizacional en productividad explosiva. Esta plataforma revolucionaria permite a equipos y profesionales individuales crear, asignar, priorizar y rastrear tareas con precisión quirúrgica. Con tableros visuales Kanban dinámicos, reportes automatizados en tiempo real y analíticas predictivas, Taskman elimina cuellos de botella, mejora la colaboración y acelera la ejecución de proyectos hasta un 40%. Compatible con todos los dispositivos y accesible offline, garantiza que ningún deadline se pierda nunca más.",
-    image: "https://images.unsplash.com/photo-1551288049-bebda4e38f71?w=800&h=600&fit=crop",
-    category: ["Productividad"],
-    year: "2025",
+    id: "app-domicilios",
+    title: "HOOY",
+    shortDescription: "Aplicación móvil multisegmento para logística de última milla y servicios on-demand.",
+    fullDescription: "HOOY es una plataforma móvil de logística de última milla y marketplace multisegmento, diseñada para escalar operaciones on-demand en múltiples ciudades. Con más de 10.000 descargas, la solución integra geolocalización en tiempo real, optimización inteligente de rutas, gestión dinámica de domiciliarios y promociones inteligentes por ciudad y franja horaria. Su arquitectura cloud modular permite alto rendimiento, balanceo de carga y expansión a nuevas verticales de negocio, incorporando además un enfoque de sostenibilidad mediante módulos de recolección de aceite usado con incentivos digitales. Cumple con estándares de seguridad, privacidad y normativas colombianas de protección de datos.",
+    image: hooyApp[3],
+    category: ["Marketplace", "software tradicional"],
+    year: "2022",
     features: [
-      "Tableros Kanban interactivos con drag & drop",
-      "Seguimiento en tiempo real de progreso del equipo",
-      "Dashboards ejecutivos con métricas accionables",
-      "Sincronización instantánea multiplataforma"
+      "Marketplace multisegmento para domicilios y servicios on-demand",
+      "Geolocalización en tiempo real y optimización inteligente de rutas",
+      "Gestión dinámica de domiciliarios con balanceo automático de carga",
+      "Promociones y precios dinámicos configurables por ciudad y día",
+      "Módulo de sostenibilidad con recolección de aceite usado e incentivos digitales",
+      "Panel administrativo multi-ciudad con métricas operativas en tiempo real",
+      "Arquitectura cloud escalable con soporte para alta concurrencia",
+      "Autenticación segura y gestión de usuarios por email, teléfono o redes sociales",
+      "Cumplimiento de normativas de privacidad y protección de datos (Habeas Data)"
     ],
-    gallery: []
+    gallery: hooyApp
   },
   {
     id: "marketplace-p2p",
@@ -174,45 +180,7 @@ export const projects: Project[] = [
       "https://images.unsplash.com/photo-1586528116311-ad8dd3c8310d?w=800&h=600&fit=crop",
       "https://images.unsplash.com/photo-1553413077-190dd305871c?w=800&h=600&fit=crop"
     ]
-  },
-  {
-    id: "iza-ai",
-    title: "IZA",
-    shortDescription: "Agente IA para automatización académica.",
-    fullDescription: "IZA es el agente inteligente que revolucionará la educación automatizando el 80% de procesos administrativos y académicos. Con capacidades RAG avanzadas, tutoría personalizada 24/7, detección predictiva de deserción y orquestación multicanal (WhatsApp, web, email), IZA reduce tickets de soporte en 65% y mejora el rendimiento académico promedio en 28%. Disponible en 5 idiomas latinoamericanos.",
-    image: "https://images.unsplash.com/photo-1552664730-d307ca884978?w=800&h=600&fit=crop",
-    category: ["IA/Automatización"],
-    year: "2025",
-    features: [
-      "Tutoría IA 24/7 en lenguaje natural",
-      "Alertas predictivas de deserción (95% precisión)",
-      "Multicanal: WhatsApp, web, Telegram",
-      "Búsqueda semántica sobre materiales educativos"
-    ],
-    gallery: [
-      "https://images.unsplash.com/photo-1552664730-d307ca884978?w=800&h=600&fit=crop",
-      "https://images.unsplash.com/photo-1542744173-8e7e53415bb0?w=800&h=600&fit=crop"
-    ]
-  },
-  {
-    id: "app-domicilios",
-    title: "App Domicilios On-Demand",
-    shortDescription: "Aplicación móvil para logística de última milla.",
-    fullDescription: "Plataforma logística de última generación con +10K descargas que optimiza rutas en tiempo real, gestiona flotas dinámicas y maximiza márgenes operativos. Con geolocalización predictiva, balanceo automático de carga, promociones dinámicas por IA y panel ejecutivo multi-ciudad, nuestra solución multiplica pedidos diarios x3 y reduce tiempos de entrega en 42%. Escalable a cualquier vertical de negocio.",
-    image: "https://images.unsplash.com/photo-1560518883-ce09059eeffa?w=800&h=600&fit=crop",
-    category:[ "Logística"],
-    year: "2025",
-    features: [
-      "Geolocalización predictiva con IA",
-      "Balanceo automático de domiciliarios",
-      "Promociones dinámicas por ciudad/hora",
-      "Panel multi-ciudad en tiempo real"
-    ],
-    gallery: [
-      "https://images.unsplash.com/photo-1560518883-ce09059eeffa?w=800&h=600&fit=crop",
-      "https://images.unsplash.com/photo-1512917774080-9991f1c4c750?w=800&h=600&fit=crop"
-    ]
-  },
+  }
 ];
 
 

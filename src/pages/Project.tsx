@@ -72,12 +72,11 @@ const Project = () => {
                   </Button>
               </div>
             </div>
-
             <div className="relative rounded-2xl overflow-hidden border border-border">
               <img
                 src={project.image}
                 alt={project.title}
-                className="w-full h-auto"
+                className="w-full max-h-[420px] object-cover"
               />
             </div>
           </div>
