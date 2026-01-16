@@ -41,9 +41,9 @@ const Project = () => {
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
             <div>
               <div className="flex items-center gap-3 mb-4">
-                <span className="text-sm font-medium px-3 py-1 rounded-full bg-primary/20 text-primary">
-                  {project.category}
-                </span>
+                  {project.category.map((category, index) =>  (
+                <span key={index} className="text-sm font-medium px-3 py-1 rounded-full bg-primary/20 text-primary">{category}</span>
+                  ))}
                 <span className="text-sm text-muted-foreground">{project.year}</span>
               </div>
               <h1 className="text-4xl md:text-5xl font-bold mb-6">
