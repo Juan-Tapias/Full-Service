@@ -60,7 +60,7 @@ const Project = () => {
                 </div>
                   <Button
                     asChild
-                    className="hidden md:flex bg-gradient-to-r from-primary to-secondary hover:opacity-90 cursor-pointer transition-opacity"
+                    className="hidden flex bg-gradient-to-r from-primary to-secondary hover:opacity-90 cursor-pointer transition-opacity"
                   >
                     <a
                       href={project.link}
