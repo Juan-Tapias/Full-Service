@@ -32,6 +32,70 @@ export interface Project {
 
 export const projects: Project[] = [
   {
+    id: "Orbit-AI",
+    title: "ORBIT",
+    shortDescription: "Asesor Comercial IA",
+    fullDescription: "Orbit es una plataforma de gestión de estudiantes y prospectos con inteligencia artificial, diseñada para centralizar la atención por WhatsApp, organizar la información de los leads y facilitar el seguimiento comercial. Su enfoque principal es ordenar, priorizar y dar trazabilidad al proceso de contacto y conversión, especialmente en entornos educativos.",
+    image: orbitImages[2],
+    category: "Asesor IA",
+    year: "2025",
+    features: [
+      "Gestión centralizada de estudiantes, leads y contactos comerciales en un único sistema.",
+      "Atención inicial automatizada 24/7 mediante un agente de inteligencia artificial conversacional.",
+      "Seguimiento comercial estructurado con etapas definidas y control del embudo de conversión.",
+      "Comunicación integrada y centralizada a través de WhatsApp y otros canales digitales.",
+      "Envío de mensajes masivos, campañas segmentadas y comunicaciones automatizadas.",
+      "Visualización de métricas, KPIs y control operativo en tiempo real desde un dashboard ejecutivo.",
+      "Configuración avanzada de usuarios, roles y permisos con control granular de accesos.",
+      "Gestión y actualización dinámica del conocimiento del agente de inteligencia artificial.",
+      "Historial completo de interacciones, actividades y estados para cada estudiante o cliente."
+    ],
+    gallery: orbitImages
+  },
+  {
+    id: "avicampo",
+    title: "Sistema de Gestión de Pedidos con Agente IA",
+    shortDescription: "Plataforma de automatización inteligente para la gestión de pedidos y atención al cliente mediante agentes conversacionales.",
+    fullDescription: "Plataforma integral de automatización operativa que optimiza la gestión de pedidos y la atención al cliente a través de un agente conversacional basado en inteligencia artificial. Permite a los usuarios realizar pedidos, consultar catálogos y hacer seguimiento de sus solicitudes de forma autónoma. Incorpora un panel administrativo avanzado para la gestión multi-sucursal, asignación inteligente de pedidos por zonas y un dashboard con analítica en tiempo real para el control de indicadores clave del negocio.",
+    image: avicampoImages[3],
+    category: "Automatización Comercial y Operativa",
+    year: "2025",
+    features: [
+      "Visualización en tiempo real de KPIs operativos, ingresos y tendencias de demanda.",
+      "Administración de catálogos de productos o servicios mediante carga masiva con plantillas estructuradas.",
+      "Asignación automática de pedidos o solicitudes según zonas geográficas configurables.",
+      "Gestión centralizada de conversaciones con capacidad de intervención humana en tiempo real.",
+      "Entrenamiento y actualización del agente IA mediante carga de documentos y bases de conocimiento.",
+      "Control de acceso basado en roles y permisos personalizados por módulo.",
+      "Seguimiento completo del ciclo de vida de pedidos o solicitudes, desde la creación hasta el cierre.",
+      "Configuración flexible de horarios de atención por sede, equipo o canal.",
+      "Gestión de múltiples métodos de pago y validación de transacciones.",
+      "Exportación de reportes operativos, históricos de pedidos y bases de datos para análisis externo."
+    ],
+    gallery: avicampoImages
+  },
+  {
+    id: "mac-learning",
+    title: "MAC Learning",
+    shortDescription: "Plataforma digital de aprendizaje en línea.",
+    fullDescription: "MAC Learning es una plataforma LMS diseñada para facilitar la educación virtual y la formación continua a través de cursos, programas académicos y contenidos digitales. Ofrece una experiencia de aprendizaje flexible, accesible y estructurada para estudiantes, docentes e instituciones, integrando gestión académica, seguimiento del progreso y administración de contenidos en un solo sistema.",
+    image: macLearning[4],
+    category: "Educación",
+    year: "2025",
+    features: [
+      "Acceso a cursos y contenidos educativos desde cualquier dispositivo con conexión a internet",
+      "Visualización de módulos, lecciones y recursos organizados por programa académico",
+      "Seguimiento del progreso académico con registro de avances y actividades completadas",
+      "Consulta de calificaciones y resultados de evaluaciones en tiempo real",
+      "Participación en actividades de aprendizaje colaborativo y foros de discusión",
+      "Acceso a clases virtuales y recursos de apoyo definidos por el docente",
+      "Gestión del perfil personal y datos académicos del usuario",
+      "Recepción de notificaciones y avisos académicos importantes",
+      "Descarga de materiales y recursos educativos autorizados"
+    ],
+    gallery: macLearning
+  },
+  {
     id: "taskman",
     title: "Taskman",
     shortDescription: "Software de gestión de tareas para equipos e individuos.",
@@ -94,27 +158,6 @@ export const projects: Project[] = [
     ]
   },
   {
-    id: "mac-learning",
-    title: "MAC Learning",
-    shortDescription: "Plataforma digital de aprendizaje en línea.",
-    fullDescription: "MAC Learning es una plataforma LMS diseñada para facilitar la educación virtual y la formación continua a través de cursos, programas académicos y contenidos digitales. Ofrece una experiencia de aprendizaje flexible, accesible y estructurada para estudiantes, docentes e instituciones, integrando gestión académica, seguimiento del progreso y administración de contenidos en un solo sistema.",
-    image: macLearning[4],
-    category: "Educación",
-    year: "2025",
-    features: [
-      "Acceso a cursos y contenidos educativos desde cualquier dispositivo con conexión a internet",
-      "Visualización de módulos, lecciones y recursos organizados por programa académico",
-      "Seguimiento del progreso académico con registro de avances y actividades completadas",
-      "Consulta de calificaciones y resultados de evaluaciones en tiempo real",
-      "Participación en actividades de aprendizaje colaborativo y foros de discusión",
-      "Acceso a clases virtuales y recursos de apoyo definidos por el docente",
-      "Gestión del perfil personal y datos académicos del usuario",
-      "Recepción de notificaciones y avisos académicos importantes",
-      "Descarga de materiales y recursos educativos autorizados"
-    ],
-    gallery: macLearning
-  },
-  {
     id: "gestion-entrenamiento",
     title: "Sistema Gestión Centros Entrenamiento",
     shortDescription: "Plaltaforma modular para operaciones académicas.",
@@ -171,49 +214,6 @@ export const projects: Project[] = [
       "https://images.unsplash.com/photo-1512917774080-9991f1c4c750?w=800&h=600&fit=crop"
     ]
   },
-  {
-    id: "Orbit-AI",
-    title: "ORBIT",
-    shortDescription: "Asesor Comercial IA",
-    fullDescription: "Orbit es una plataforma de gestión de estudiantes y prospectos con inteligencia artificial, diseñada para centralizar la atención por WhatsApp, organizar la información de los leads y facilitar el seguimiento comercial. Su enfoque principal es ordenar, priorizar y dar trazabilidad al proceso de contacto y conversión, especialmente en entornos educativos.",
-    image: orbitImages[2],
-    category: "Asesor IA",
-    year: "2025",
-    features: [
-      "Gestión centralizada de estudiantes, leads y contactos comerciales en un único sistema.",
-      "Atención inicial automatizada 24/7 mediante un agente de inteligencia artificial conversacional.",
-      "Seguimiento comercial estructurado con etapas definidas y control del embudo de conversión.",
-      "Comunicación integrada y centralizada a través de WhatsApp y otros canales digitales.",
-      "Envío de mensajes masivos, campañas segmentadas y comunicaciones automatizadas.",
-      "Visualización de métricas, KPIs y control operativo en tiempo real desde un dashboard ejecutivo.",
-      "Configuración avanzada de usuarios, roles y permisos con control granular de accesos.",
-      "Gestión y actualización dinámica del conocimiento del agente de inteligencia artificial.",
-      "Historial completo de interacciones, actividades y estados para cada estudiante o cliente."
-    ],
-    gallery: orbitImages
-  },
-  {
-    id: "avicampo",
-    title: "Sistema de Gestión de Pedidos con Agente IA",
-    shortDescription: "Plataforma de automatización inteligente para la gestión de pedidos y atención al cliente mediante agentes conversacionales.",
-    fullDescription: "Plataforma integral de automatización operativa que optimiza la gestión de pedidos y la atención al cliente a través de un agente conversacional basado en inteligencia artificial. Permite a los usuarios realizar pedidos, consultar catálogos y hacer seguimiento de sus solicitudes de forma autónoma. Incorpora un panel administrativo avanzado para la gestión multi-sucursal, asignación inteligente de pedidos por zonas y un dashboard con analítica en tiempo real para el control de indicadores clave del negocio.",
-    image: avicampoImages[3],
-    category: "Automatización Comercial y Operativa",
-    year: "2025",
-    features: [
-      "Visualización en tiempo real de KPIs operativos, ingresos y tendencias de demanda.",
-      "Administración de catálogos de productos o servicios mediante carga masiva con plantillas estructuradas.",
-      "Asignación automática de pedidos o solicitudes según zonas geográficas configurables.",
-      "Gestión centralizada de conversaciones con capacidad de intervención humana en tiempo real.",
-      "Entrenamiento y actualización del agente IA mediante carga de documentos y bases de conocimiento.",
-      "Control de acceso basado en roles y permisos personalizados por módulo.",
-      "Seguimiento completo del ciclo de vida de pedidos o solicitudes, desde la creación hasta el cierre.",
-      "Configuración flexible de horarios de atención por sede, equipo o canal.",
-      "Gestión de múltiples métodos de pago y validación de transacciones.",
-      "Exportación de reportes operativos, históricos de pedidos y bases de datos para análisis externo."
-    ],
-    gallery: avicampoImages
-  }
 ];
 
 
