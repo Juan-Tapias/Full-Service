@@ -68,7 +68,6 @@ export const projects: Project[] = [
       "Entrenamiento y actualización del agente IA mediante carga de documentos y bases de conocimiento.",
       "Control de acceso basado en roles y permisos personalizados por módulo.",
       "Seguimiento completo del ciclo de vida de pedidos o solicitudes, desde la creación hasta el cierre.",
-      "Configuración flexible de horarios de atención por sede, equipo o canal.",
       "Gestión de múltiples métodos de pago y validación de transacciones.",
       "Exportación de reportes operativos, históricos de pedidos y bases de datos para análisis externo."
     ],
