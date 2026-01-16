@@ -82,15 +82,15 @@ export const projects: Project[] = [
     category: ["Educación", "Software tradicional"],
     year: "2025",
     features: [
-      "Acceso a cursos y contenidos educativos desde cualquier dispositivo con conexión a internet",
-      "Visualización de módulos, lecciones y recursos organizados por programa académico",
-      "Seguimiento del progreso académico con registro de avances y actividades completadas",
-      "Consulta de calificaciones y resultados de evaluaciones en tiempo real",
-      "Participación en actividades de aprendizaje colaborativo y foros de discusión",
-      "Acceso a clases virtuales y recursos de apoyo definidos por el docente",
-      "Gestión del perfil personal y datos académicos del usuario",
-      "Recepción de notificaciones y avisos académicos importantes",
-      "Descarga de materiales y recursos educativos autorizados"
+      "Acceso a cursos y contenidos educativos desde cualquier dispositivo con conexión a internet.",
+      "Visualización de módulos, lecciones y recursos organizados por programa académico.",
+      "Seguimiento del progreso académico con registro de avances y actividades completadas.",
+      "Consulta de calificaciones y resultados de evaluaciones en tiempo real.",
+      "Participación en actividades de aprendizaje colaborativo y foros de discusión.",
+      "Acceso a clases virtuales y recursos de apoyo definidos por el docente.",
+      "Gestión del perfil personal y datos académicos del usuario.",
+      "Recepción de notificaciones y avisos académicos importantes.",
+      "Descarga de materiales y recursos educativos autorizados."
     ],
     gallery: macLearning
   },

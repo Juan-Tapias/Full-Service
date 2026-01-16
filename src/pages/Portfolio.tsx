@@ -49,9 +49,9 @@ const Portfolio = () => {
 
                 <div className="p-6">
                   <div className="flex items-center gap-2 mb-3">
-                    <span className="text-xs font-medium px-2 py-1 rounded-full bg-primary/20 text-primary">
-                      {project.category}
-                    </span>
+                    {project.category.map((category, index) =>  (
+                      <span key={index} className="text-sm text-center font-medium px-3 py-1 rounded-full bg-primary/20 text-primary">{category}</span>
+                    ))}
                     <span className="text-xs text-muted-foreground">{project.year}</span>
                   </div>
                   <h3 className="text-xl font-semibold mb-2 group-hover:text-primary transition-colors">
