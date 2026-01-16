@@ -60,10 +60,10 @@ const Project = () => {
                 </div>
                   <Button
                     asChild
-                    className="hidden md:flex bg-gradient-to-r from-primary to-secondary hover:opacity-90 transition-opacity"
+                    className="hidden md:flex bg-gradient-to-r from-primary to-secondary hover:opacity-90 cursor-pointer transition-opacity"
                   >
                     <a
-                      href="https://xd.adobe.com/view/59e3453d-35c1-4780-a626-2101a5e7caa6-0cb0/"
+                      href={project.link}
                       target="_blank"
                       rel="noopener noreferrer"
                     >
@@ -76,8 +76,9 @@ const Project = () => {
               <img
                 src={project.image}
                 alt={project.title}
-                className="w-full max-h-[420px] object-cover"
+                className="w-full max-h-[420px] lg:max-h-[520px] 2xl:max-h-[620px] object-cover"
               />
+
             </div>
           </div>
         </div>
@@ -89,7 +90,7 @@ const Project = () => {
             Características principales
           </h1>
 
-          <ul className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-x-12 gap-y-4 max-w-5xl mx-auto">
+          <ul className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-x-16 gap-y-6 max-w-6xl 2xl:max-w-7xl mx-auto">
             {project.features.map((feature, index) => (
               <li key={index} className="flex items-start gap-3">
                 <CheckCircle2 className="w-5 h-5 text-accent mt-0.5 flex-shrink-0" />
@@ -117,7 +118,7 @@ const Project = () => {
                       startIndex: activeIndex,
                       loop: true,
                     }}
-                    className="w-full max-w-6xl px-4"
+                    className="w-full max-w-7xl 2xl:max-w-[1600px] px-6"
                     onClick={(e) => e.stopPropagation()}
                   >
                     <CarouselContent>
@@ -143,7 +144,7 @@ const Project = () => {
                 align: "start",
                 loop: true,
               }}
-              className="w-full max-w-6xl mx-auto"
+              className="w-full max-w-7xl 2xl:max-w-[1400px] mx-auto"
             >
               <CarouselContent>
                 {project.gallery.map((image, index) => (

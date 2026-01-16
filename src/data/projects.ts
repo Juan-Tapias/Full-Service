@@ -29,6 +29,7 @@ export interface Project {
   year: string;
   features: string[];
   gallery: ProjectImage[];
+  link?: string;
 }
 
 export const projects: Project[] = [
@@ -57,7 +58,7 @@ export const projects: Project[] = [
     id: "avicampo",
     title: "Sistema de Gestión de Pedidos con Agente IA",
     shortDescription: "Plataforma de automatización inteligente para la gestión de pedidos y atención al cliente mediante agentes conversacionales.",
-    fullDescription: "Plataforma integral de automatización operativa que optimiza la gestión de pedidos y la atención al cliente a través de un agente conversacional basado en inteligencia artificial. Permite a los usuarios realizar pedidos, consultar catálogos y hacer seguimiento de sus solicitudes de forma autónoma. Incorpora un panel administrativo avanzado para la gestión multi-sucursal, asignación inteligente de pedidos por zonas y un dashboard con analítica en tiempo real para el control de indicadores clave del negocio.",
+    fullDescription: "Plataforma integral de automatización operativa que optimiza la gestión de pedidos y la atención al cliente a través de un agente conversacional en WhatsApp basado en inteligencia artificial. Permite a los usuarios realizar pedidos, consultar catálogos y hacer seguimiento de sus solicitudes de forma autónoma. Incorpora un panel administrativo avanzado para la gestión multi-sucursal, asignación inteligente de pedidos por zonas y un dashboard con analítica en tiempo real para el control de indicadores clave del negocio.",
     image: avicampoImages[3],
     category: ["Automatización Comercial y Operativa", "Software con IA"],
     year: "2025",
@@ -93,28 +94,30 @@ export const projects: Project[] = [
       "Recepción de notificaciones y avisos académicos importantes.",
       "Descarga de materiales y recursos educativos autorizados."
     ],
-    gallery: macLearning
+    gallery: macLearning,
+    link: "https://xd.adobe.com/view/59e3453d-35c1-4780-a626-2101a5e7caa6-0cb0/"
   },
   {
     id: "app-domicilios",
     title: "HOOY",
-    shortDescription: "Aplicación móvil multisegmento para logística de última milla y servicios on-demand.",
+    shortDescription: "Aplicación móvil multisegmento para logística de última milla y servicios.",
     fullDescription: "HOOY es una plataforma móvil de logística de última milla y marketplace multisegmento, diseñada para escalar operaciones on-demand en múltiples ciudades. Con más de 10.000 descargas, la solución integra geolocalización en tiempo real, optimización inteligente de rutas, gestión dinámica de domiciliarios y promociones inteligentes por ciudad y franja horaria. Su arquitectura cloud modular permite alto rendimiento, balanceo de carga y expansión a nuevas verticales de negocio, incorporando además un enfoque de sostenibilidad mediante módulos de recolección de aceite usado con incentivos digitales. Cumple con estándares de seguridad, privacidad y normativas colombianas de protección de datos.",
     image: hooyApp[3],
-    category: ["Marketplace", "software tradicional"],
+    category: ["Marketplace", "Software tradicional"],
     year: "2022",
     features: [
-      "Marketplace multisegmento para domicilios y servicios on-demand",
-      "Geolocalización en tiempo real y optimización inteligente de rutas",
-      "Gestión dinámica de domiciliarios con balanceo automático de carga",
-      "Promociones y precios dinámicos configurables por ciudad y día",
-      "Módulo de sostenibilidad con recolección de aceite usado e incentivos digitales",
-      "Panel administrativo multi-ciudad con métricas operativas en tiempo real",
-      "Arquitectura cloud escalable con soporte para alta concurrencia",
-      "Autenticación segura y gestión de usuarios por email, teléfono o redes sociales",
-      "Cumplimiento de normativas de privacidad y protección de datos (Habeas Data)"
+      "Marketplace multisegmento para domicilios y servicios.",
+      "Geolocalización en tiempo real y optimización inteligente de rutas.",
+      "Gestión dinámica de domiciliarios con balanceo automático de carga.",
+      "Promociones y precios dinámicos configurables por ciudad y día.",
+      "Módulo de sostenibilidad con recolección de aceite usado e incentivos digitales.",
+      "Panel administrativo multi-ciudad con métricas operativas en tiempo real.",
+      "Arquitectura cloud escalable con soporte para alta concurrencia.",
+      "Autenticación segura y gestión de usuarios por email, teléfono o redes sociales.",
+      "Cumplimiento de normativas de privacidad y protección de datos."
     ],
-    gallery: hooyApp
+    gallery: hooyApp,
+    link: "https://apps.apple.com/co/app/hooy/id1669828040?l=en-GB"
   },
   {
     id: "marketplace-p2p",
