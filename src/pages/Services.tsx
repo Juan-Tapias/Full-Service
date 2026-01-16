@@ -1,69 +1,54 @@
 import { 
-  Code, 
-  Users, 
-  BarChart3, 
-  Package, 
-  ArrowRight, 
-  CheckCircle2 
+  Briefcase, 
+  Building2, 
+  Lightbulb,
+  ArrowRight,
+  CheckCircle2
 } from "lucide-react";
 import { Layout } from "@/components/layout/Layout";
 import { Button } from "@/components/ui/button";
 
 const services = [
   {
-    icon: Code,
-    title: "Desarrollo Software a la Medida",
-    description: "Soluciones completamente personalizadas que se adaptan a tus procesos específicos, con propiedad total del código fuente y escalabilidad garantizada.",
+    icon: Briefcase,
+    title: "Staffing Tecnológico",
+    description: "Incorporamos desarrolladores y perfiles técnicos especializados directamente a tu equipo para resolver necesidades inmediatas, acelerar entregas y cubrir vacantes críticas sin procesos de contratación largos ni cargas administrativas. Nuestro talento se adapta rápidamente a tus herramientas, metodologías y objetivos, aportando resultados desde el primer día.",
     features: [
-      "Software 100% propietario",
-      "Adaptación perfecta a procesos",
-      "Escalabilidad ilimitada",
-      "Integración total de sistemas",
-      "Ciclo completo de desarrollo",
-      "Soporte y mantenimiento continuo"
+      "Selección precisa de perfiles según experiencia, stack y objetivos del proyecto",
+      "Contratos flexibles por horas o períodos definidos, sin compromisos a largo plazo",
+      "Integración directa con tus equipos, procesos y herramientas actuales",
+      "Gestión administrativa, pagos y cumplimiento a cargo de nuestro equipo",
+      "Seguimiento continuo con reportes claros de avances y resultados",
+      "Escalamiento ágil desde un recurso puntual hasta equipos completos"
     ],
   },
   {
-    icon: Users,
-    title: "Células de Trabajo",
-    description: "Equipos multidisciplinarios autónomos disponibles por horas o proyectos, con talento especializado y tarifas competitivas en USD.",
+    icon: Building2,
+    title: "BPO Tecnológico",
+    description: "Nos hacemos cargo de la ejecución técnica completa de tus proyectos digitales a través de equipos autónomos y especializados. Diseñamos, desarrollamos, mantenemos y evolucionamos tus aplicaciones mientras tú te enfocas en el crecimiento del negocio, con costos predecibles y control total sobre los resultados.",
     features: [
-      "Full Stack Development",
-      "DevOps y QA Testing",
-      "Data Science y Machine Learning",
-      "UX/UI Design profesional",
-      "Arquitectura de software",
-      "Tarifas por rol y seniority"
+      "Equipos completos con liderazgo técnico, desarrollo y control de calidad",
+      "Desarrollo integral de aplicaciones web, móviles y sistemas a medida",
+      "Infraestructura, despliegue y mantenimiento incluidos en el servicio",
+      "Monitoreo continuo y operación estable para garantizar disponibilidad",
+      "Reportes periódicos claros sobre avances, métricas y estado del proyecto",
+      "Transferencia total de conocimiento y activos al finalizar el servicio"
     ],
   },
   {
-    icon: BarChart3,
-    title: "Consultorías Transformación Digital",
-    description: "Análisis profundo de procesos empresariales con planes estratégicos de automatización e implementación de IA generativa.",
+    icon: Lightbulb,
+    title: "Consultoría Digital",
+    description: "Analizamos en profundidad tus procesos, operaciones y modelo de negocio para identificar oportunidades reales de mejora mediante tecnología. Te entregamos una hoja de ruta clara y accionable para optimizar costos, aumentar eficiencia e incorporar automatización e inteligencia artificial con impacto medible.",
     features: [
-      "Diagnóstico de procesos",
-      "Visitas in situ a operaciones",
-      "Plan de transformación digital",
-      "Automatización con IA",
-      "Estrategia tecnológica",
-      "Roadmap de implementación"
+      "Diagnóstico estructurado de procesos y flujos operativos actuales",
+      "Identificación de cuellos de botella y oportunidades de optimización",
+      "Definición de soluciones tecnológicas alineadas a objetivos de negocio",
+      "Validaciones rápidas para demostrar resultados antes de escalar",
+      "Aplicación estratégica de automatización e inteligencia artificial",
+      "Entrega de documentación clara y roadmap de implementación"
     ],
-  },
-  {
-    icon: Package,
-    title: "Comercialización Productos Existentes",
-    description: "Implementación inmediata de productos probados y listos para usar, con personalización y soporte técnico especializado.",
-    features: [
-      "Taskman gestión de tareas",
-      "Marketplace P2P colaborativo",
-      "Plataformas LMS educativas",
-      "Configuradores 3D productos",
-      "Sistemas gestión entrenamiento",
-      "Agente IA IZA 24/7"
-    ],
-  },
+  }
 ];
-
 
 const processSteps = [
   {
@@ -78,13 +63,13 @@ const processSteps = [
   },
   {
     number: "03",
-    title: "Hacer Cotización",
-    description: "Analizamos requerimientos detallados y estructuramos propuesta técnica y comercial precisa.",
+    title: "Estructura Proyecto",
+    description: "Definimos arquitectura, equipo y roadmap con hitos claros para ejecución eficiente.",
   },
   {
     number: "04",
-    title: "Estructura Proyecto",
-    description: "Definimos arquitectura, equipo y roadmap con hitos claros para ejecución eficiente.",
+    title: "Hacer Cotización",
+    description: "Analizamos requerimientos detallados y estructuramos propuesta técnica y comercial precisa.",
   },
   {
     number: "05",

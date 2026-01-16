@@ -2,7 +2,8 @@ import { useParams, Link, Navigate } from "react-router-dom";
 import { ArrowLeft, CheckCircle2 } from "lucide-react";
 import { Layout } from "@/components/layout/Layout";
 import { getProjectById, projects } from "@/data/projects";
-import { useState} from "react";
+import * as React from "react"
+import { Button } from "@/components/ui/button";
 import {
   Carousel,
   CarouselContent,
@@ -19,8 +20,7 @@ const Project = () => {
     return <Navigate to="/portafolio" replace />;
   }
 
-
-  const [activeImage, setActiveImage] = useState<string | null>(null);
+  const [activeIndex, setActiveIndex] = React.useState<number | null>(null);
   const currentIndex = projects.findIndex((p) => p.id === id);
   const nextProject = projects[(currentIndex + 1) % projects.length];
   const prevProject = projects[(currentIndex - 1 + projects.length) % projects.length];
@@ -58,6 +58,18 @@ const Project = () => {
                   <div className="text-sm text-muted-foreground">Año</div>
                   <div className="font-semibold">{project.year}</div>
                 </div>
+                  <Button
+                    asChild
+                    className="hidden md:flex bg-gradient-to-r from-primary to-secondary hover:opacity-90 transition-opacity"
+                  >
+                    <a
+                      href="https://xd.adobe.com/view/59e3453d-35c1-4780-a626-2101a5e7caa6-0cb0/"
+                      target="_blank"
+                      rel="noopener noreferrer"
+                    >
+                      Previsualizar producto
+                    </a>
+                  </Button>
               </div>
             </div>
 
@@ -96,21 +108,37 @@ const Project = () => {
               Galería
             </h2>
 
-            {activeImage && (
-              <div
-                className="fixed inset-0 z-50 flex items-center justify-center bg-black/70 backdrop-blur-sm"
-                onClick={() => setActiveImage(null)}
-              >
-                <img
-                  src={activeImage}
-                  alt="Imagen ampliada"
-                  className="max-w-[90%] max-h-[90%] rounded-xl shadow-2xl
-                            animate-in zoom-in duration-300"
-                  onClick={(e) => e.stopPropagation()}
-                />
-              </div>
-            )}
+            {activeIndex !== null && (
+                <div
+                  className="fixed inset-0 z-50 flex items-center justify-center bg-black/70 backdrop-blur-sm"
+                  onClick={() => setActiveIndex(null)}
+                >
+                  <Carousel
+                    opts={{
+                      startIndex: activeIndex,
+                      loop: true,
+                    }}
+                    className="w-full max-w-6xl px-4"
+                    onClick={(e) => e.stopPropagation()}
+                  >
+                    <CarouselContent>
+                      {project.gallery.map((image, index) => (
+                        <CarouselItem key={index}>
+                          <img
+                            src={image}
+                            alt={`${project.title} - Imagen ${index + 1}`}
+                            className="max-h-[90vh] w-auto mx-auto rounded-xl shadow-2xl
+                                      animate-in zoom-in duration-300"
+                          />
+                        </CarouselItem>
+                      ))}
+                    </CarouselContent>
 
+                    <CarouselPrevious className="left-4" />
+                    <CarouselNext className="right-4" />
+                  </Carousel>
+                </div>
+              )}
             <Carousel
               opts={{
                 align: "start",
@@ -128,7 +156,7 @@ const Project = () => {
                       <img
                         src={image}
                         alt={`${project.title} - Imagen ${index + 1}`}
-                        onClick={() => setActiveImage(image)}
+                        onClick={() => setActiveIndex(index)}
                         className="w-full h-64 object-cover cursor-zoom-in
                                   hover:scale-105 transition-transform duration-500"
                       />

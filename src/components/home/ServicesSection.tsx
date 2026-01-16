@@ -1,27 +1,25 @@
-import { Code, Users, Cpu, ShoppingCart } from "lucide-react";
-import { Link } from "react-router-dom";
+import { 
+  Briefcase, 
+  Building2, 
+  Lightbulb,
+} from "lucide-react";import { Link } from "react-router-dom";
 
 const services = [
   {
-    icon: Code,
-    title: "Desarrollo Software a la Medida",
-    description: "Soluciones personalizadas, adaptables y propietarias del código para procesos eficientes.",
+    icon: Briefcase,
+    title: "Staffing Tecnológico",
+    description: "Desarrolladores que se incorporan a tu equipo para cubrir vacantes urgentes o proyectos con mucha demanda.",
   },
   {
-    icon: Users,
-    title: "Células de Trabajo",
-    description: "Equipos autónomos y escalables por horas, con talento especializado (Full Stack, DevOps, etc.).",
+    icon: Building2,
+    title: "BPO Tecnológico",
+    description: "Equipos completos que crean, mantienen y hacen crecer tus aplicaciones desde nuestras oficinas, sin que tú gestiones nada.",
   },
   {
-    icon: Cpu,
-    title: "Consultorías",
-    description: "Transformación digital, análisis de procesos y planes con IA generativa.",
-  },
-  {
-    icon: ShoppingCart,
-    title: "Comercialización Productos Existentes",
-    description: "Implementación y venta de productos propios probados como Taskman, marketplaces y LMS para resultados inmediatos.",
-  },
+    icon: Lightbulb,
+    title: "Consultoría Digital",
+    description: "Revisamos tus procesos actuales y te damos un plan claro para mejorarlos con tecnología moderna, paso a paso.",
+  }
 ];
 
 export const ServicesSection = () => {
@@ -39,26 +37,27 @@ export const ServicesSection = () => {
             Ofrecemos soluciones tecnológicas completas para llevar tu negocio al siguiente nivel.
           </p>
         </div>
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
-          {services.map((service, index) => (
-            <div
-              key={service.title}
-              className="group relative p-6 rounded-xl bg-card border border-border hover:border-primary/50 transition-all duration-300 hover:shadow-lg hover:shadow-primary/10"
-              style={{ animationDelay: `${index * 0.1}s` }}
-            >
-              <div className="w-14 h-14 rounded-lg bg-gradient-to-br from-primary to-secondary flex items-center justify-center mb-5 group-hover:scale-110 transition-transform duration-300">
-                <service.icon className="w-7 h-7 text-primary-foreground" />
+          <div className="mx-auto grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+            {services.map((service, index) => (
+              <div
+                key={service.title}
+                className="group relative p-6 rounded-xl bg-card border border-border hover:border-primary/50 transition-all duration-300 hover:shadow-lg hover:shadow-primary/10 w-full max-w-sm"
+                style={{ animationDelay: `${index * 0.1}s` }}
+              >
+                <div className="w-14 h-14 rounded-lg bg-gradient-to-br from-primary to-secondary flex items-center justify-center mb-5 group-hover:scale-110 transition-transform duration-300">
+                  <service.icon className="w-7 h-7 text-primary-foreground" />
+                </div>
+
+                <h3 className="text-xl font-semibold mb-3">{service.title}</h3>
+                <p className="text-muted-foreground text-sm leading-relaxed">
+                  {service.description}
+                </p>
+
+                <div className="absolute bottom-0 left-0 right-0 h-1 bg-gradient-to-r from-primary to-secondary scale-x-0 group-hover:scale-x-100 transition-transform duration-300 rounded-b-xl" />
               </div>
+            ))}
+          </div>
 
-              <h3 className="text-xl font-semibold mb-3">{service.title}</h3>
-              <p className="text-muted-foreground text-sm leading-relaxed">
-                {service.description}
-              </p>
-
-              <div className="absolute bottom-0 left-0 right-0 h-1 bg-gradient-to-r from-primary to-secondary scale-x-0 group-hover:scale-x-100 transition-transform duration-300 rounded-b-xl" />
-            </div>
-          ))}
-        </div>
 
         <div className="text-center mt-12">
           <Link

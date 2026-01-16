@@ -16,6 +16,7 @@ export function loadProjectImages(projectSlug: string): string[] {
 }
 const orbitImages = loadProjectImages("orbit");
 const avicampoImages = loadProjectImages("avicampo");
+const macLearning = loadProjectImages("MacLearning");
 
 export interface Project {
   id: string;
@@ -93,27 +94,25 @@ export const projects: Project[] = [
     ]
   },
   {
-    id: "lms-educativa",
-    title: "Plataforma LMS Educativa",
-    shortDescription: "Sistema de aprendizaje en línea interactivo.",
-    fullDescription: "Transforma la educación tradicional con nuestra Plataforma LMS de vanguardia que combina gamificación, inteligencia artificial y colaboración en tiempo real. Gestiona cohortes completas con seguimiento individualizado, certificaciones verificables por blockchain, aulas virtuales inmersivas y analíticas predictivas que identifican estudiantes en riesgo de deserción con 95% de precisión. Usada por +200 instituciones colombianas.",
-    image: "https://images.unsplash.com/photo-1501504905252-473c47e087f8?w=800&h=600&fit=crop",
+    id: "mac-learning",
+    title: "MAC Learning",
+    shortDescription: "Plataforma digital de aprendizaje en línea.",
+    fullDescription: "MAC Learning es una plataforma LMS diseñada para facilitar la educación virtual y la formación continua a través de cursos, programas académicos y contenidos digitales. Ofrece una experiencia de aprendizaje flexible, accesible y estructurada para estudiantes, docentes e instituciones, integrando gestión académica, seguimiento del progreso y administración de contenidos en un solo sistema.",
+    image: macLearning[4],
     category: "Educación",
     year: "2025",
     features: [
-      "Gamificación con insignias y leaderboards",
-      "IA que predice deserción estudiantil",
-      "Certificados verificables blockchain",
-      "Clases en vivo con grabación automática"
+      "Acceso a cursos y contenidos educativos desde cualquier dispositivo con conexión a internet",
+      "Visualización de módulos, lecciones y recursos organizados por programa académico",
+      "Seguimiento del progreso académico con registro de avances y actividades completadas",
+      "Consulta de calificaciones y resultados de evaluaciones en tiempo real",
+      "Participación en actividades de aprendizaje colaborativo y foros de discusión",
+      "Acceso a clases virtuales y recursos de apoyo definidos por el docente",
+      "Gestión del perfil personal y datos académicos del usuario",
+      "Recepción de notificaciones y avisos académicos importantes",
+      "Descarga de materiales y recursos educativos autorizados"
     ],
-    gallery: [
-      "https://images.unsplash.com/photo-1501504905252-473c47e087f8?w=800&h=600&fit=crop",
-      "https://images.unsplash.com/photo-1501504905252-473c47e087f8?w=800&h=600&fit=crop",
-      "https://images.unsplash.com/photo-1501504905252-473c47e087f8?w=800&h=600&fit=crop",
-      "https://images.unsplash.com/photo-1501504905252-473c47e087f8?w=800&h=600&fit=crop",
-      "https://images.unsplash.com/photo-1501504905252-473c47e087f8?w=800&h=600&fit=crop",
-      "https://images.unsplash.com/photo-1522202176988-66273c2fd55f?w=800&h=600&fit=crop"
-    ]
+    gallery: macLearning
   },
   {
     id: "gestion-entrenamiento",
@@ -176,20 +175,20 @@ export const projects: Project[] = [
     id: "Orbit-AI",
     title: "ORBIT",
     shortDescription: "Asesor Comercial IA",
-    fullDescription: "Plataforma integral de automatización comercial impulsada por un agente conversacional de inteligencia artificial. Centraliza la atención al cliente, la gestión del embudo comercial y el control operativo desde un panel unificado, garantizando atención 24/7, trazabilidad completa de cada contacto y optimización continua del proceso de ventas.",
+    fullDescription: "Orbit es una plataforma de gestión de estudiantes y prospectos con inteligencia artificial, diseñada para centralizar la atención por WhatsApp, organizar la información de los leads y facilitar el seguimiento comercial. Su enfoque principal es ordenar, priorizar y dar trazabilidad al proceso de contacto y conversión, especialmente en entornos educativos.",
     image: orbitImages[2],
     category: "Asesor IA",
-    year: "2026",
+    year: "2025",
     features: [
-      "Visualización de métricas clave de ingresos, conversión y crecimiento en tiempo real mediante un dashboard ejecutivo.",
-      "Gestión centralizada de conversaciones multicanal con capacidad de intervención humana en casos complejos.",
-      "Seguimiento detallado del ciclo de vida de cada cliente o lead, desde el primer contacto hasta la conversión o cierre.",
-      "Actualización y entrenamiento del asesor IA mediante la carga y categorización de documentos de procesos, políticas o productos.",
-      "Configuración de sedes físicas, horarios de atención y zonas de cobertura para la asignación automática de citas o servicios.",
-      "Administración de catálogos de productos o servicios con precios, disponibilidad y segmentación por sucursal.",
-      "Control de acceso al sistema mediante roles y permisos granulares por módulo.",
-      "Automatización de validaciones, calificaciones de leads y agendamiento de citas presenciales o virtuales.",
-      "Supervisión completa del flujo conversacional y del historial de interacciones entre el agente y los clientes."
+      "Gestión centralizada de estudiantes, leads y contactos comerciales en un único sistema.",
+      "Atención inicial automatizada 24/7 mediante un agente de inteligencia artificial conversacional.",
+      "Seguimiento comercial estructurado con etapas definidas y control del embudo de conversión.",
+      "Comunicación integrada y centralizada a través de WhatsApp y otros canales digitales.",
+      "Envío de mensajes masivos, campañas segmentadas y comunicaciones automatizadas.",
+      "Visualización de métricas, KPIs y control operativo en tiempo real desde un dashboard ejecutivo.",
+      "Configuración avanzada de usuarios, roles y permisos con control granular de accesos.",
+      "Gestión y actualización dinámica del conocimiento del agente de inteligencia artificial.",
+      "Historial completo de interacciones, actividades y estados para cada estudiante o cliente."
     ],
     gallery: orbitImages
   },
