@@ -101,7 +101,7 @@ export const projects: Project[] = [
     id: "app-domicilios",
     title: "HOOY",
     shortDescription: "Aplicación móvil multisegmento para logística de última milla y servicios.",
-    fullDescription: "HOOY es una plataforma móvil de logística de última milla y marketplace multisegmento, diseñada para escalar operaciones on-demand en múltiples ciudades. Con más de 10.000 descargas, la solución integra geolocalización en tiempo real, optimización inteligente de rutas, gestión dinámica de domiciliarios y promociones inteligentes por ciudad y franja horaria. Su arquitectura cloud modular permite alto rendimiento, balanceo de carga y expansión a nuevas verticales de negocio, incorporando además un enfoque de sostenibilidad mediante módulos de recolección de aceite usado con incentivos digitales. Cumple con estándares de seguridad, privacidad y normativas colombianas de protección de datos.",
+    fullDescription: "HOOY es una plataforma móvil de logística de última milla y marketplace multisegmento diseñada para operar modelos on-demand en múltiples ciudades. Permite gestionar pedidos, usuarios y domiciliarios con geolocalización en tiempo real, optimización inteligente de rutas y asignación automática de entregas. Incorpora precios y promociones dinámicas por ciudad y franja horaria, un panel administrativo multi-ciudad con métricas operativas en tiempo real y una arquitectura cloud escalable preparada para alto volumen de operaciones.",
     image: hooyApp[3],
     category: ["Marketplace", "Software tradicional"],
     year: "2022",
